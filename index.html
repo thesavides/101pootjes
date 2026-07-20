@@ -113,40 +113,47 @@
 
 <main id="main">
 
-<!-- ═══ SECTION 2 · Hero (main banner + announcements) ═══════════════ -->
+<!-- ═══ SECTION 2 · Hero (announcement + two promotions) ════════════ -->
 <section class="hero">
-  <div class="hero__media">
-    <img src="assets/img/hero.svg" alt="Een hond en een kat in de winkel van 101 Pootjes" width="1200" height="800" fetchpriority="high">
-  </div>
-  <div class="wrap hero__grid">
-    <div class="hero__copy">
-      <h1 data-t="hero.h1">Alles wat je huisdier<br>nodig heeft,<br><em>met liefde.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></h1>
+  <div class="wrap">
+    <div class="hero__head">
+      <h1 data-t="hero.h1">Alles wat je huisdier nodig heeft, <em>met liefde.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></h1>
       <p data-t="hero.sub">Premium voeding, betrouwbaar advies en vriendelijke, lokale service voor elke poot en staart.</p>
-      <div class="hero__actions">
-        <a class="btn btn--primary btn--lg" href="#contact"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="hero.visit">Bezoek Onze Winkel</span></a>
-        <a class="btn btn--ghost btn--lg" href="#contact" data-t="hero.contact">Neem Contact Op</a>
-      </div>
     </div>
 
-    <div class="hero__aside">
+    <div class="hero__cards">
       <!-- ▸ Reusable announcement slot — replace content for future announcements -->
       <aside class="announce announce--salon">
         <span class="announce__tag" data-t="salonbadge.tag">✨ Binnenkort</span>
         <span class="announce__icon" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg></span>
-        <h2 data-t="salonbadge.title">Onze Trimsalon<br>opent binnenkort!</h2>
-        <p data-t="salonbadge.text">Wassen, knippen en verwennen — professionele verzorging voor je beste vriend. Wees er als eerste bij.</p>
-        <a class="btn btn--salon" href="#salon" data-t="salonbadge.cta">Schrijf je in voor de wachtlijst</a>
+        <h2 data-t="salonbadge.title">Onze Trimsalon opent binnenkort!</h2>
+        <p data-t="salonbadge.text">Wassen, knippen en verwennen — professionele verzorging voor je beste vriend.</p>
+        <div class="announce__contact">
+          <a class="btn btn--salon btn--sm" href="https://wa.me/31651755091" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> <span data-t="contact.wa">WhatsApp</span></a>
+          <a class="btn btn--ghost btn--sm" href="mailto:manonsvachtatelier@icloud.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> <span data-t="contact.email">E-mail</span></a>
+        </div>
       </aside>
 
       <!-- ▸ Promotion of the month -->
       <aside class="announce announce--promo">
+        <img class="announce__img" src="assets/img/promo.jpg" alt="Natural Health Steamed kattenvoeding" width="1000" height="708" loading="lazy">
         <div class="announce__promo-body">
           <span class="announce__tag announce__tag--food" data-t="promo.eyebrow">Actie van de Maand</span>
           <p class="announce__deal" data-t="promo.deal">4 + 1 GRATIS</p>
           <h3 data-t="promo.h3">Natural Health Steamed</h3>
           <a class="btn btn--food btn--sm" href="#contact" data-t="promo.cta">Kom Langs</a>
         </div>
-        <img src="assets/img/promo.jpg" alt="Natural Health Steamed kattenvoeding" width="1000" height="708" loading="lazy">
+      </aside>
+
+      <!-- ▸ Staff recommendation / second promotion slot -->
+      <aside class="announce announce--promo">
+        <img class="announce__img" src="assets/img/promo2.jpg" alt="Thrive Complete kattenvoeding" width="594" height="507" loading="lazy">
+        <div class="announce__promo-body">
+          <span class="announce__tag announce__tag--fish" data-t="promo2.eyebrow">Onze Aanrader</span>
+          <p class="announce__deal announce__deal--fish" data-t="promo2.h3">Thrive Complete</p>
+          <h3 data-t="promo2.text">100% natuurlijke kattenvoeding</h3>
+          <a class="btn btn--fish btn--sm" href="#contact" data-t="promo2.cta">Kom Langs</a>
+        </div>
       </aside>
     </div>
   </div>
@@ -167,6 +174,8 @@
   </ul>
 </section>
 
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
+
 <!-- ═══ SECTION 4 · What we offer ════════════════════════════════════ -->
 <section class="wrap section offer">
   <header class="sechead">
@@ -179,6 +188,8 @@
     <li class="feature feature--health"><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span><h3 data-t="offer.service.h3">Vriendelijke Service</h3><p data-t="offer.service.p">Persoonlijke, lokale service met een glimlach.</p></li>
   </ul>
 </section>
+
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
 <!-- ═══ SECTION 5 · Brands ═══════════════════════════════════════════ -->
 <section class="section" id="brands">
@@ -200,17 +211,26 @@
       <li><img src="assets/img/brands/josera.png" alt="Josera" loading="lazy"></li>
       <li><img src="assets/img/brands/bunny-nature.jpeg" alt="Bunny Nature" loading="lazy"></li>
     </ul>
-    <p class="sechead__cta"><a class="btn btn--ghost" href="#" data-t="brands.cta">Bekijk Alle Merken</a></p>
   </div>
 </section>
+
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
 <!-- ═══ SECTION 6 · Products we stock (category dropdowns) ═══════════ -->
 <section class="section" id="products">
   <div class="wrap">
-    <header class="sechead">
-      <h2 data-t="cat.title">Producten Die Wij Verkopen</h2>
-      <p data-t="cat.sub">Van voeding tot verzorging — klik een categorie open om te zien wat we in huis hebben.</p>
-    </header>
+    <div class="prodbanner">
+      <div class="prodbanner__text">
+        <h2 data-t="cat.title">Producten Die Wij Verkopen</h2>
+        <p data-t="cat.sub">Van voeding tot verzorging — klik een categorie open om te zien wat we in huis hebben.</p>
+      </div>
+      <div class="prodbanner__pets" aria-hidden="true">
+        <span style="--accent:var(--c-dog)"><svg class="ico"><use href="#i-paw"/></svg></span>
+        <span style="--accent:var(--c-cat)"><svg class="ico"><use href="#i-cat"/></svg></span>
+        <span style="--accent:var(--c-bird)"><svg class="ico"><use href="#i-bird"/></svg></span>
+        <span style="--accent:var(--c-fish)"><svg class="ico"><use href="#i-fish"/></svg></span>
+      </div>
+    </div>
     <ul class="prodcats">
       <li class="prodcat" style="--accent:var(--c-dog)"><details>
         <summary><span class="prodcat__ic"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg></span><span class="prodcat__name" data-t="cat.dogs.l">Honden</span><svg class="ico prodcat__chev" aria-hidden="true"><use href="#i-chev"/></svg></summary>
@@ -248,8 +268,10 @@
   </div>
 </section>
 
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
+
 <!-- ═══ SECTION 7 · Local weather + pet tip (own row) ════════════════ -->
-<section class="wrap section duo" aria-label="Weer &amp; diertip">
+<section class="wrap section duo duo--eq" aria-label="Weer &amp; diertip">
   <article class="card weather">
     <h2 class="card__eyebrow card__eyebrow--fish" data-t="weather.h2">Lokaal Weer</h2>
     <p class="weather__loc">Diemen, NL</p>
@@ -275,18 +297,26 @@
   </article>
 </section>
 
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
+
 <!-- ═══ SECTION 8 · Salon (Manon's Vachtatelier) ════════════════════ -->
 <section class="section" id="salon">
   <div class="wrap salon">
+    <header class="salon__head">
+      <p class="eyebrow eyebrow--acc" data-t="salon.eyebrow">Binnenkort</p>
+      <h2 data-t="salon.h2">Professionele Trimsalon</h2>
+    </header>
     <div class="salon__banner">
       <img src="assets/img/salon-banner.png" alt="Manon's Vachtatelier — Liefde, Verzorging, Vertrouwen" width="1600" height="533" loading="lazy">
     </div>
     <div class="salon__body">
       <div class="salon__copy">
-        <p class="eyebrow eyebrow--acc" data-t="salon.eyebrow">Binnenkort</p>
-        <h2 data-t="salon.h2">Professionele Trimsalon</h2>
         <p data-t="salon.text">Een rustige, zorgvuldige plek voor je huisdier — geleid door mensen die ze bij naam kennen.</p>
-        <a class="btn btn--salon btn--lg" href="#contact" data-t="salon.cta">Schrijf je in voor de wachtlijst</a>
+        <p class="salon__contactlead" data-t="salon.contactlead">Reserveren of een vraag? Neem rechtstreeks contact op met de salon:</p>
+        <div class="announce__contact">
+          <a class="btn btn--salon btn--lg" href="https://wa.me/31651755091" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> <span data-t="contact.wa">WhatsApp</span></a>
+          <a class="btn btn--ghost btn--lg" href="mailto:manonsvachtatelier@icloud.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> <span data-t="contact.email">E-mail</span></a>
+        </div>
       </div>
       <ul class="ticks salon__ticks">
         <li data-t="salon.t1">Wassen</li><li data-t="salon.t2">Nagels Knippen</li><li data-t="salon.t3">Rasspecifiek Trimmen</li><li data-t="salon.t4">Puppytrimmen</li>
@@ -295,6 +325,8 @@
     <p class="salon__note" data-t="salon.note">Let op: de trimsalon <b>Manon's Vachtatelier</b> is een zelfstandig bedrijf en staat los van 101 Pootjes. Alle reserveringen, afspraken en betalingen verlopen rechtstreeks met de salon. 101 Pootjes is niet betrokken bij de dienstverlening van de salon en draagt hiervoor geen verantwoordelijkheid of aansprakelijkheid.</p>
   </div>
 </section>
+
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
 <!-- ═══ SECTION 9 · Events + Facebook ════════════════════════════════ -->
 <section class="wrap section duo" id="events">
@@ -337,6 +369,8 @@
   </article>
 </section>
 
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
+
 <!-- ═══ SECTION 10 · Donation drive (Dierenasiel Oostzaan) ══════════ -->
 <section class="wrap section" id="donate" aria-label="Doneer">
   <div class="donate">
@@ -371,6 +405,8 @@
     <p class="donate__discount"><span data-t="donate.discount">Alle donatie-artikelen ontvangen</span> <b data-t="donate.discountb">15% korting</b> <span data-t="donate.discount2">bij de kassa.</span></p>
   </div>
 </section>
+
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
 <!-- ═══ SECTION 11 · Visit us ════════════════════════════════════════ -->
 <section class="wrap section visit" id="contact">
@@ -410,6 +446,8 @@
     </ul>
   </div>
 </section>
+
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
 <!-- ═══ SECTION 12 · About me (bottom) ═══════════════════════════════ -->
 <section class="wrap section about" id="about">

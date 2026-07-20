@@ -16,14 +16,16 @@
       "nav.brands": "Brands", "nav.salon": "Salon", "nav.events": "News &amp; Events",
       "nav.contact": "Contact", "nav.call": "Call Us", "pill.soon": "Coming Soon",
 
-      "hero.h1": 'Everything<br>your pet needs,<br><em>with love.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg>',
+      "hero.h1": 'Everything your pet needs, <em>with love.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg>',
       "hero.sub": "Premium food, trusted advice and friendly local service for every tail and paw.",
-      "hero.visit": "Visit Our Store", "hero.contact": "Contact Us",
 
       "salonbadge.tag": "✨ Coming Soon",
-      "salonbadge.title": "Our Grooming Salon<br>opens soon!",
-      "salonbadge.text": "Washing, clipping and pampering — professional care for your best friend. Be the first to know.",
-      "salonbadge.cta": "Join the Waiting List",
+      "salonbadge.title": "Our Grooming Salon opens soon!",
+      "salonbadge.text": "Washing, clipping and pampering — professional care for your best friend.",
+      "contact.wa": "WhatsApp", "contact.email": "Email",
+
+      "promo2.eyebrow": "Our Pick", "promo2.h3": "Thrive Complete",
+      "promo2.text": "100% natural cat food", "promo2.cta": "Drop By",
 
       "qb.store.title": "Visit Our Store",
       "qb.open.title": "Open Today", "qb.open.status": "We are open",
@@ -57,7 +59,6 @@
 
       "brands.h2": "Brands We Stock",
       "brands.sub": "Trusted names we've chosen ourselves — and can advise you on.",
-      "brands.cta": "View All Brands",
 
       "weather.h2": "Local Weather", "weather.cond": "Partly Cloudy",
       "weather.d1": "Today", "weather.d2": "Wed", "weather.d3": "Thu", "weather.d4": "Fri",
@@ -73,7 +74,7 @@
       "salon.eyebrow": "Coming Soon", "salon.h2": "Professional Grooming Salon",
       "salon.text": "A calm, careful space for your pet — run by people who know them by name.",
       "salon.t1": "Bathing", "salon.t2": "Nail Clipping", "salon.t3": "Breed Styling", "salon.t4": "Puppy Grooming",
-      "salon.cta": "Join the Waiting List",
+      "salon.contactlead": "To book or ask a question, contact the salon directly:",
       "salon.note": "Please note: the grooming salon <b>Manon's Vachtatelier</b> is an independent business and is separate from 101 Pootjes. All reservations, appointments and payments are handled directly with the salon. 101 Pootjes is not involved in the salon's services and accepts no responsibility or liability for them.",
 
       "events.h2": "Upcoming Events", "events.viewall": "View all events →",
