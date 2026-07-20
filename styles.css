@@ -590,7 +590,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .feature--health .fi { color: var(--c-health); }
 
 /* ── Products we stock — category dropdowns ──────────────────────── */
-.prodcats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.prodcats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; align-items: start; }
 .prodcat details {
   background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--accent);
   border-radius: var(--r); box-shadow: var(--shadow); overflow: hidden;
@@ -621,11 +621,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 980px) {
   .hero__cards { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; }
   .offer .features { grid-template-columns: 1fr; }
-  .prodcats { grid-template-columns: 1fr; }
+  .prodcats { grid-template-columns: repeat(2, 1fr); }
   .prodbanner { flex-direction: column; text-align: center; }
   .prodbanner__pets { justify-content: center; }
 }
 @media (max-width: 680px) {
+  .prodcats { grid-template-columns: 1fr; }
   .prodcat__list { padding-left: 18px; }
 }
 
@@ -648,13 +649,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .prodbanner__text h2 { margin-bottom: 4px; }
 .prodbanner__text p { margin: 0; color: #4b5563; max-width: 46ch; }
-.prodbanner__pets { display: flex; gap: 12px; flex: none; }
+.prodbanner__pets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; flex: none; }
 .prodbanner__pets span {
   display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
   background: #fff; color: var(--accent); box-shadow: var(--shadow);
 }
 .prodbanner__pets .ico { width: 30px; height: 30px; }
-.prodbanner__pets span:nth-child(3), .prodbanner__pets span:nth-child(4) { display: grid; }
 
 /* ── Salon: heading above the banner ─────────────────────────────── */
 .salon__head { text-align: center; margin-bottom: clamp(18px, 2.5vw, 28px); }
@@ -668,5 +668,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 .duo--eq .weather__days { margin-top: auto; }
 
 @media (max-width: 560px) {
-  .prodbanner__pets span:nth-child(4) { display: none; }
+  .prodbanner__pets span { width: 48px; height: 48px; }
+  .prodbanner__pets .ico { width: 26px; height: 26px; }
 }
