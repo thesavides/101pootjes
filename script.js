@@ -28,7 +28,7 @@
       "qb.store.title": "Visit Our Store",
       "qb.open.title": "Open Today", "qb.open.status": "We are open",
       "qb.call.title": "Call Us", "qb.call.text": "We're here to help",
-      "qb.park.title": "Free Parking", "qb.park.text": "Plenty of parking<br>right in front",
+      "qb.park.title": "Parking", "qb.park.text": "In the car park of the<br>Diemerplein shopping centre",
 
       "about.eyebrow": "About 101 Pootjes",
       "about.h2": "About me",
@@ -71,6 +71,7 @@
       "salon.text": "A calm, careful space for your pet — run by people who know them by name.",
       "salon.t1": "Bathing", "salon.t2": "Nail Clipping", "salon.t3": "Breed Styling", "salon.t4": "Puppy Grooming",
       "salon.cta": "Join the Waiting List",
+      "salon.note": "Please note: the grooming salon <b>Manon's Vachtatelier</b> is an independent business and is separate from 101 Pootjes. All reservations, appointments and payments are handled directly with the salon. 101 Pootjes is not involved in the salon's services and accepts no responsibility or liability for them.",
 
       "events.h2": "Upcoming Events", "events.viewall": "View all events →",
       "ev1.title": "Puppy Social Morning", "ev1.time": "Sunday, 1 June • 10:00", "ev1.text": "A fun morning for pups and their people.",
@@ -91,7 +92,7 @@
       "donate.discount": "All donated items receive", "donate.discountb": "15% off", "donate.discount2": "at the till.",
 
       "visit.store.h2": "Visit Our Store",
-      "visit.park": "In the heart of the Diemerplein shopping centre.",
+      "visit.park": "Our shop and parking are located inside the Diemerplein shopping centre.",
       "visit.cta": "Get Directions →",
       "visit.hours.h2": "Opening Hours", "visit.closed": "Closed",
       "visit.contact.h2": "Get in Touch", "visit.wa": "WhatsApp Us",

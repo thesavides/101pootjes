@@ -14,10 +14,59 @@
 </head>
 <body>
 
-<header class="header" id="header" style="position:static">
+<svg class="spritesheet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<defs>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3.5 5.2 2 2 0 0 1 5.5 3z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+<symbol id="i-fb" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.2c0-.9.3-1.5 1.5-1.5H16.7V4a20 20 0 0 0-2.4-.1c-2.5 0-4.1 1.5-4.1 4.2V10H7.5v3h2.7v8z"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5 5 16.4A8.2 8.2 0 1 1 8.1 19.4zM9 8.4c-.3 0-.6.1-.8.4-.3.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.8 4.3 3.8 2.1.8 2.6.7 3 .6.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4l-2-1c-.3-.1-.5-.1-.7.1l-.8 1c-.2.2-.4.3-.7.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6l-.8-2c-.2-.5-.4-.5-.6-.5z"/></symbol>
+</defs>
+</svg>
+
+<a class="skip-link" href="#main">Ga naar inhoud</a>
+
+<!-- Header (matches homepage) -->
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <ul class="topbar__facts">
+      <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Diemerplein 174, 1111 JD Diemen</li>
+      <li><a href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> +31 20 123 4567</a></li>
+      <li><a href="mailto:info@101pootjes.nl"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> info@101pootjes.nl</a></li>
+    </ul>
+    <div class="topbar__right">
+      <div class="langswitch" aria-label="Taal / Language">
+        <button type="button" data-lang="nl" class="is-active">NL</button><button type="button" data-lang="en">EN</button>
+      </div>
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://wa.me/31201234567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<header class="header" id="header">
   <div class="wrap header__inner">
-    <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="101 Pootjes" width="149" height="149"></a>
-    <a class="btn btn--ghost" href="index.html" style="margin-left:auto">← Terug naar home</a>
+    <a class="logo" href="index.html"><img src="assets/img/logo.png" alt="101 Pootjes — dierenspeciaalzaak &amp; trimsalon" width="149" height="149"></a>
+    <nav class="nav" id="nav" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="index.html" data-t="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-t="nav.about">Over Ons</a></li>
+        <li><a href="index.html#products" data-t="nav.products">Producten</a></li>
+        <li><a href="index.html#brands" data-t="nav.brands">Merken</a></li>
+        <li><a href="index.html#salon"><span data-t="nav.salon">Trimsalon</span></a></li>
+        <li><a href="index.html#events" data-t="nav.events">Nieuws &amp; Evenementen</a></li>
+        <li><a href="index.html#contact" data-t="nav.contact">Contact</a></li>
+        <li class="nav__lang">
+          <div class="langswitch" aria-label="Taal / Language">
+            <button type="button" data-lang="nl" class="is-active">NL</button><button type="button" data-lang="en">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary header__cta" href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> <span data-t="nav.call">Bel Ons</span></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -28,23 +77,33 @@
 
   <section id="voorwaarden">
     <h2>Algemene Voorwaarden</h2>
-    <p>Deze voorwaarden zijn van toepassing op alle diensten en aankopen bij 101 Pootjes, gevestigd aan het Diemerplein 174, 1111 JD Diemen.</p>
+    <p>Deze voorwaarden zijn van toepassing op alle diensten en aankopen bij 101 Pootjes, gevestigd in winkelcentrum Diemerplein aan het Diemerplein 174, 1111 JD Diemen.</p>
+
     <h3>1. Bedrijfsgegevens</h3>
     <p>101 Pootjes — Dierenspeciaalzaak &amp; Trimsalon<br>Diemerplein 174, 1111 JD Diemen, Nederland<br>E-mail: info@101pootjes.nl · Telefoon: +31 20 123 4567<br>KvK: 00000000 · BTW: NL000000000B00</p>
+
     <h3>2. Producten en advies</h3>
     <p>Wij doen ons best om producten en advies zo zorgvuldig mogelijk aan te bieden. Advies is algemeen van aard en vervangt geen dierenartsconsult.</p>
+
     <h3>3. Prijzen en acties</h3>
     <p>Prijzen zijn inclusief btw. Acties (zoals “4+1 gratis”) gelden zolang de voorraad strekt en kunnen niet worden gecombineerd met andere aanbiedingen.</p>
-    <h3>4. Trimsalon</h3>
-    <p>Afspraken voor de trimsalon worden gemaakt op basis van beschikbaarheid. Bij verhindering vragen wij u minimaal 24 uur van tevoren af te melden.</p>
+
+    <h3>4. Trimsalon — zelfstandig bedrijf (belangrijk)</h3>
+    <p><strong>De trimsalon “Manon's Vachtatelier” is een volledig zelfstandige onderneming en maakt géén deel uit van 101 Pootjes.</strong> Reserveringen, afspraken, betalingen en de uitvoering van alle trim- en verzorgingsdiensten verlopen uitsluitend en rechtstreeks met de salon zelf.</p>
+    <p>101 Pootjes treedt hierbij niet op als tussenpersoon, bemiddelaar of dienstverlener en aanvaardt geen enkele aansprakelijkheid voor de dienstverlening, afspraken, planning, betalingen of eventuele schade die verband houdt met de trimsalon. Een eventuele wachtlijst- of interesse-aanmelding via deze website wordt uitsluitend doorgegeven aan de salon; hieraan kunnen geen rechten worden ontleend jegens 101 Pootjes.</p>
+
     <h3>5. Aansprakelijkheid</h3>
-    <p>101 Pootjes is niet aansprakelijk voor schade die voortvloeit uit onjuist gebruik van producten.</p>
+    <p>101 Pootjes is niet aansprakelijk voor schade die voortvloeit uit onjuist gebruik van producten, noch voor diensten van derden (waaronder de zelfstandige trimsalon Manon's Vachtatelier).</p>
+
+    <h3>6. Parkeren en locatie</h3>
+    <p>De winkel en het parkeren bevinden zich in winkelcentrum Diemerplein. Parkeertarieven en -voorwaarden worden bepaald door het winkelcentrum en staan los van 101 Pootjes.</p>
   </section>
 
   <section id="privacy">
     <h2>Privacy &amp; Cookies</h2>
     <h3>Welke gegevens verwerken wij?</h3>
-    <p>Wanneer u contact met ons opneemt of zich inschrijft voor de wachtlijst van de trimsalon, verwerken wij uw naam en contactgegevens. Wij gebruiken deze uitsluitend om uw vraag te beantwoorden of de afspraak te regelen. Wij verkopen uw gegevens niet.</p>
+    <p>Wanneer u contact met ons opneemt of interesse toont in de wachtlijst van de trimsalon, verwerken wij uw naam en contactgegevens. Wij gebruiken deze uitsluitend om uw vraag te beantwoorden of, in het geval van de trimsalon, uw aanmelding door te geven aan de zelfstandige salon. Wij verkopen uw gegevens niet.</p>
+
     <h3>Cookies</h3>
     <p>Deze website gebruikt de volgende soorten cookies:</p>
     <table class="legal__table">
@@ -52,18 +111,50 @@
       <tbody>
         <tr><td>Noodzakelijk</td><td>Onthoudt je taalkeuze en cookievoorkeur</td><td>Altijd actief</td></tr>
         <tr><td>Analytisch</td><td>Anoniem meten van websitegebruik</td><td>Na toestemming</td></tr>
-        <tr><td>Marketing / Social</td><td>Facebook-feed en gedeelde content</td><td>Na toestemming</td></tr>
+        <tr><td>Marketing / Social</td><td>Facebook-content en gedeelde berichten</td><td>Na toestemming</td></tr>
       </tbody>
     </table>
     <p>U kunt uw keuze op elk moment aanpassen via <a href="index.html">Cookievoorkeuren</a> onderaan de homepage.</p>
+
     <h3>Vragen?</h3>
     <p>Neem contact op via <a href="mailto:info@101pootjes.nl">info@101pootjes.nl</a>.</p>
   </section>
 </main>
 
+<!-- Footer (matches homepage) -->
 <footer class="footer">
-  <div class="wrap footer__base"><p>© 2026 101 Pootjes. Alle rechten voorbehouden.</p></div>
+  <div class="wrap footer__cols">
+    <div>
+      <img src="assets/img/logo.png" alt="101 Pootjes" width="149" height="149" class="footer__logo" loading="lazy">
+      <p data-t="footer.tagline">Jouw vertrouwde lokale adres voor kwaliteitsproducten, deskundig advies en oprechte zorg.</p>
+    </div>
+    <div>
+      <h3 data-t="footer.quick">Snelle Links</h3>
+      <ul><li><a href="index.html#about" data-t="nav.about">Over Ons</a></li><li><a href="index.html#products" data-t="nav.products">Producten</a></li><li><a href="index.html#brands" data-t="nav.brands">Merken</a></li><li><a href="index.html#salon" data-t="nav.salon">Trimsalon</a></li><li><a href="index.html#events" data-t="nav.events">Nieuws &amp; Evenementen</a></li><li><a href="index.html#contact" data-t="nav.contact">Contact</a></li></ul>
+    </div>
+    <div>
+      <h3 data-t="footer.hours">Openingstijden</h3>
+      <ul><li data-t="footer.h1line">Ma – Vr · 09:00 – 18:00</li><li data-t="footer.h2line">Zaterdag · 09:00 – 17:00</li><li data-t="footer.h3line">Zondag · Gesloten</li></ul>
+    </div>
+    <div>
+      <h3 data-t="footer.follow">Volg Ons</h3>
+      <ul class="socials socials--footer">
+        <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://wa.me/31201234567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+      </ul>
+      <p><a href="tel:+31201234567">+31 20 123 4567</a><br><a href="mailto:info@101pootjes.nl">info@101pootjes.nl</a></p>
+    </div>
+  </div>
+  <div class="wrap footer__base">
+    <p data-t="footer.copyright">© 2026 101 Pootjes. Alle rechten voorbehouden.</p>
+    <ul class="footer__legal">
+      <li><a href="#voorwaarden" data-t="legal.terms">Algemene Voorwaarden</a></li>
+      <li><a href="#privacy" data-t="legal.privacy">Privacy &amp; Cookies</a></li>
+      <li><a href="index.html" data-t="legal.cookiesettings">Cookievoorkeuren</a></li>
+    </ul>
+  </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
