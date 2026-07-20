@@ -26,6 +26,7 @@
   --c-food:  #FF7043;
   --c-health:#EF5350;
   --c-acc:   #7E57C2;
+  --c-salon: #a87c40;   /* Manon's Vachtatelier — warm beige/gold, not purple */
   --blue:   var(--c-fish);
   --orange: var(--c-food);
   --yellow: var(--c-cat);
@@ -537,37 +538,35 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* ── Accent CTA buttons ──────────────────────────────────────────── */
 .btn--sm { min-height: 40px; padding: 9px 16px; font-size: .85rem; }
-.btn--salon { background: var(--c-acc); color: #fff; }
-.btn--salon:hover { background: #6a46a8; color: #fff; transform: translateY(-1px); }
+.btn--salon { background: var(--c-salon); color: #fff; }
+.btn--salon:hover { background: #8f6832; color: #fff; transform: translateY(-1px); }
 .btn--food { background: var(--c-food); color: #fff; }
 .btn--food:hover { background: #e85f2f; color: #fff; transform: translateY(-1px); }
 
 .card__eyebrow--fish { color: var(--c-fish); }
-.eyebrow--acc { color: var(--c-acc); }
+.eyebrow--acc { color: var(--c-salon); }
 
 /* ── Hero announcement + promo cards (3 across) ──────────────────── */
 .announce { position: relative; display: flex; flex-direction: column; height: 100%;
   background: #fff; border-radius: var(--r-lg); box-shadow: var(--shadow-md); padding: 24px; overflow: hidden; }
 .announce__tag {
   align-self: flex-start; margin-bottom: 12px; padding: 6px 12px; border-radius: 999px;
-  font: 700 .72rem/1 var(--font-head); letter-spacing: .02em; color: #fff; background: var(--c-acc);
+  font: 700 .72rem/1 var(--font-head); letter-spacing: .02em; color: #fff; background: var(--c-salon);
 }
 .announce__tag--food { background: var(--c-food); }
 .announce__tag--fish { background: var(--c-fish); }
 
-.announce--salon { background: linear-gradient(155deg, #fbf8ff, #f1e9fb); border: 1px solid #e7ddf6; }
-.announce--salon .announce__icon {
-  position: absolute; top: 22px; right: 22px; display: grid; place-items: center;
-  width: 46px; height: 46px; background: var(--c-acc); color: #fff; border-radius: 50%;
-  box-shadow: 0 6px 16px rgba(126,87,194,.4);
-}
-.announce--salon .announce__icon .ico { width: 22px; height: 22px; }
+.announce--salon { background: linear-gradient(155deg, #faf5ec, #efe3ce); border: 1px solid #e7d8bd; }
 .announce--salon .announce__logo {
-  position: absolute; top: 18px; right: 18px; width: 64px; height: 64px;
-  border-radius: 50%; box-shadow: var(--shadow); background: #fff;
+  position: absolute; top: 16px; right: 16px; width: 92px; height: 92px;
+  border-radius: 50%; box-shadow: var(--shadow-md); background: #fff; object-fit: contain;
+  border: 2px solid #fff;
 }
-.announce--salon h2 { font-size: 1.28rem; margin: 2px 0 10px; max-width: 13ch; }
-.announce--salon p { font-size: .9rem; color: var(--text-muted); margin-bottom: 16px; }
+.announce--salon h2 { font-size: 1.28rem; margin: 2px 0 10px; max-width: 12ch; color: #5c4526; }
+.announce--salon p { font-size: .9rem; color: #6b5a42; margin-bottom: 12px; }
+.announce__disclaimer { margin: 0 0 14px; font-size: .76rem; }
+.announce__disclaimer a { color: var(--c-salon); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.announce__disclaimer a:hover { color: #85622f; }
 .announce__contact { display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap; }
 .announce__contact .btn { flex: 1; }
 

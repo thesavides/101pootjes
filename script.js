@@ -22,6 +22,7 @@
       "salonbadge.tag": "✨ Coming Soon",
       "salonbadge.title": "Our Grooming Salon opens soon!",
       "salonbadge.text": "Washing, clipping and pampering — professional care for your best friend.",
+      "salonbadge.disclaimer": "Please note: independent salon — read more ↓",
       "contact.wa": "WhatsApp", "contact.email": "Email",
 
       "promo2.eyebrow": "Our Pick", "promo2.h3": "Thrive Complete",
