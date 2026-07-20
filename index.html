@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>101 Pootjes — Pet Shop in Diemen | Pet Food, Advice &amp; Grooming</title>
-<meta name="description" content="101 Pootjes is an independent pet shop in Diemen. Premium pet food, trusted advice and friendly local service — plus a professional grooming salon coming soon.">
+<title>101 Pootjes — Dierenspeciaalzaak in Diemen | Voeding, Advies &amp; Trimsalon</title>
+<meta name="description" content="101 Pootjes is een onafhankelijke dierenspeciaalzaak in Diemen. Premium voeding, betrouwbaar advies en vriendelijke service — met binnenkort een professionele trimsalon.">
 <link rel="icon" href="assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
   "@context": "https://schema.org",
   "@type": "PetStore",
   "name": "101 Pootjes",
-  "description": "Independent pet shop in Diemen offering premium pet food, accessories, expert advice and professional grooming.",
+  "description": "Onafhankelijke dierenspeciaalzaak in Diemen met premium voeding, accessoires, deskundig advies en professionele trimsalon.",
   "image": "https://101pootjes.nl/assets/img/logo.png",
   "telephone": "+31201234567",
   "email": "info@101pootjes.nl",
@@ -63,7 +63,7 @@
 </defs>
 </svg>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main" data-t="skip">Ga naar inhoud</a>
 
 <!-- ═══ SECTION 1 · Header ═══════════════════════════════════════════ -->
 <div class="topbar">
@@ -74,9 +74,9 @@
       <li><a href="mailto:info@101pootjes.nl"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> info@101pootjes.nl</a></li>
     </ul>
     <div class="topbar__right">
-      <!-- Weglot injects its switcher here; static markup is a visual stand-in -->
-      <div class="langswitch" id="weglot_here" aria-label="Language">
-        <button class="is-active" type="button">NL</button><button type="button">EN</button>
+      <!-- Weglot injects its switcher here in production; this is the working prototype toggle -->
+      <div class="langswitch" aria-label="Taal / Language">
+        <button type="button" data-lang="nl" class="is-active">NL</button><button type="button" data-lang="en">EN</button>
       </div>
       <ul class="socials">
         <li><a href="#" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
@@ -91,19 +91,24 @@
   <div class="wrap header__inner">
     <a class="logo" href="#"><img src="assets/img/logo.png" alt="101 Pootjes — dierenspeciaalzaak &amp; trimsalon" width="149" height="149"></a>
 
-    <nav class="nav" id="nav" aria-label="Main">
+    <nav class="nav" id="nav" aria-label="Hoofdmenu">
       <ul>
-        <li><a href="#" class="is-current" aria-current="page">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#brands">Brands</a></li>
-        <li><a href="#salon">Salon <span class="pill">Coming Soon</span></a></li>
-        <li><a href="#events">News &amp; Events</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="is-current" aria-current="page" data-t="nav.home">Home</a></li>
+        <li><a href="#about" data-t="nav.about">Over Ons</a></li>
+        <li><a href="#products" data-t="nav.products">Producten</a></li>
+        <li><a href="#brands" data-t="nav.brands">Merken</a></li>
+        <li><a href="#salon"><span data-t="nav.salon">Trimsalon</span> <span class="pill" data-t="pill.soon">Binnenkort</span></a></li>
+        <li><a href="#events" data-t="nav.events">Nieuws &amp; Evenementen</a></li>
+        <li><a href="#contact" data-t="nav.contact">Contact</a></li>
+        <li class="nav__lang">
+          <div class="langswitch" aria-label="Taal / Language">
+            <button type="button" data-lang="nl" class="is-active">NL</button><button type="button" data-lang="en">EN</button>
+          </div>
+        </li>
       </ul>
     </nav>
 
-    <a class="btn btn--primary header__cta" href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> Call Us</a>
+    <a class="btn btn--primary header__cta" href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> <span data-t="nav.call">Bel Ons</span></a>
 
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
@@ -116,56 +121,57 @@
 <!-- ═══ SECTION 2 · Hero ═════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero__media">
-    <img src="assets/img/hero.svg" alt="A dog and a cat in the 101 Pootjes shop" width="1200" height="800" fetchpriority="high">
+    <img src="assets/img/hero.svg" alt="Een hond en een kat in de winkel van 101 Pootjes" width="1200" height="800" fetchpriority="high">
   </div>
   <div class="wrap hero__grid">
     <div class="hero__copy">
-      <h1>Everything<br>your pet needs,<br><em>with love.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></h1>
-      <p>Premium food, trusted advice and friendly local service for every tail and paw.</p>
+      <h1 data-t="hero.h1">Alles wat je huisdier<br>nodig heeft,<br><em>met liefde.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></h1>
+      <p data-t="hero.sub">Premium voeding, betrouwbaar advies en vriendelijke, lokale service voor elke poot en staart.</p>
       <div class="hero__actions">
-        <a class="btn btn--primary btn--lg" href="#contact"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> Visit Our Store</a>
-        <a class="btn btn--ghost btn--lg" href="#contact">Contact Us</a>
+        <a class="btn btn--primary btn--lg" href="#contact"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="hero.visit">Bezoek Onze Winkel</span></a>
+        <a class="btn btn--ghost btn--lg" href="#contact" data-t="hero.contact">Neem Contact Op</a>
       </div>
     </div>
 
     <aside class="salonbadge">
-      <p class="salonbadge__eyebrow">Coming Soon!</p>
-      <h2>Professional<br>Grooming Salon</h2>
+      <p class="salonbadge__eyebrow" data-t="salonbadge.eyebrow">Binnenkort!</p>
+      <h2 data-t="salonbadge.title">Professionele<br>Trimsalon</h2>
       <span class="salonbadge__icon" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg></span>
-      <p>Pampering, care and style for your best friend.</p>
-      <a class="btn btn--primary" href="#salon">Join the Waiting List</a>
+      <p data-t="salonbadge.text">Verzorging, aandacht en stijl voor je beste vriend.</p>
+      <a class="btn btn--primary" href="#salon" data-t="salonbadge.cta">Schrijf je in voor de wachtlijst</a>
     </aside>
   </div>
 </section>
 
 <!-- ═══ SECTION 3 · Quick info bar ═══════════════════════════════════ -->
-<section class="wrap" aria-label="Store information">
+<section class="wrap" aria-label="Winkelinformatie">
   <ul class="quickbar">
-    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3>Visit Our Store</h3><p>Kruidenhof 101<br>1112 XX Diemen</p></div></li>
-    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span><div><h3>Open Today</h3><p>09:00 – 18:00<br><b class="open">We are open</b></p></div></li>
-    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Call Us</h3><p><a href="tel:+31201234567">+31 20 123 4567</a><br>We're here to help</p></div></li>
-    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></span><div><h3>Free Parking</h3><p>Plenty of parking<br>right in front</p></div></li>
+    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3 data-t="qb.store.title">Bezoek Onze Winkel</h3><p>Kruidenhof 101<br>1112 XX Diemen</p></div></li>
+    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span><div><h3 data-t="qb.open.title">Vandaag Open</h3><p>09:00 – 18:00<br><b class="open" data-t="qb.open.status">We zijn open</b></p></div></li>
+    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3 data-t="qb.call.title">Bel Ons</h3><p><a href="tel:+31201234567">+31 20 123 4567</a><br><span data-t="qb.call.text">We helpen je graag</span></p></div></li>
+    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></span><div><h3 data-t="qb.park.title">Gratis Parkeren</h3><p data-t="qb.park.text">Volop parkeergelegenheid<br>direct voor de deur</p></div></li>
   </ul>
 </section>
 
 <!-- ═══ SECTION 4 · About ════════════════════════════════════════════ -->
 <section class="wrap section about" id="about">
   <article class="card about__intro">
-    <img src="assets/img/owner.svg" alt="The owner of 101 Pootjes holding a small dog" width="600" height="760" loading="lazy">
+    <img src="assets/img/owner.svg" alt="De eigenaar van 101 Pootjes met een klein hondje" width="600" height="760" loading="lazy">
     <div class="about__text">
-      <h2>About 101 Pootjes</h2>
-      <p>We are a local, independent pet shop with a big heart for animals and their people.</p>
-      <p>We carefully select quality products and provide honest advice you can trust.</p>
-      <a class="btn btn--primary" href="#">Learn More About Us</a>
+      <p class="eyebrow" data-t="about.eyebrow">Over 101 Pootjes</p>
+      <h2 data-t="about.h2">Over mij</h2>
+      <p data-t="about.p1">Mijn liefde voor dieren begon al op jonge leeftijd en is in de loop der jaren uitgegroeid tot mijn beroep én mijn passie. Werken met en voor dieren geeft mij elke dag energie – geen dag is hetzelfde en elk dier heeft zijn eigen karakter.</p>
+      <p data-t="about.p2">Ik heb een opleiding gevolgd in diermanagement en ben ook gediplomeerd paraveterinair. Door mijn werkervaring in een dierenspeciaalzaak, dierenartspraktijk en huisdierenverzekering heb ik brede kennis opgedaan over voeding, gezondheid, gedrag en verzorging. Deze kennis zet ik dagelijks in binnen de winkel, waar ik eigenaren graag help met eerlijk, passend en deskundig advies.</p>
+      <p data-t="about.p3">Thuis heb ik mijn kat Liam van 1 jaar oud. Hij houdt ervan om kattenkwaad uit te halen en zorgt dagelijks voor een glimlach.</p>
     </div>
   </article>
 
   <article class="card about__offer">
-    <h2>What We Offer</h2>
+    <h2 data-t="offer.h2">Wat Wij Bieden</h2>
     <ul class="features">
-      <li><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-badge"/></svg></span><h3>Expert Advice</h3><p>Knowledgeable help for every stage of life.</p></li>
-      <li><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg></span><h3>Premium Brands</h3><p>We stock trusted brands you can rely on.</p></li>
-      <li><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span><h3>Friendly Service</h3><p>Personal, local service with a smile.</p></li>
+      <li><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-badge"/></svg></span><h3 data-t="offer.advice.h3">Deskundig Advies</h3><p data-t="offer.advice.p">Deskundige hulp voor elke levensfase.</p></li>
+      <li><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-award"/></svg></span><h3 data-t="offer.brands.h3">Topmerken</h3><p data-t="offer.brands.p">Wij verkopen betrouwbare merken waar je op kunt rekenen.</p></li>
+      <li><span class="fi"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span><h3 data-t="offer.service.h3">Vriendelijke Service</h3><p data-t="offer.service.p">Persoonlijke, lokale service met een glimlach.</p></li>
     </ul>
   </article>
 </section>
@@ -173,16 +179,16 @@
 <!-- ═══ SECTION 5 · Categories ═══════════════════════════════════════ -->
 <section class="section" id="products">
   <div class="wrap panel">
-    <h2 class="panel__title"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> Shop by Category</h2>
+    <h2 class="panel__title"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="cat.title">Winkel per Categorie</span></h2>
     <ul class="cats">
-      <li class="cat"><a href="#"><img src="assets/img/cat-dogs.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> Dogs</span><p>Food, toys, beds &amp; leads</p></a></li>
-      <li class="cat"><a href="#"><img src="assets/img/cat-cats.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-cat"/></svg> Cats</span><p>Nutrition, litter &amp; play</p></a></li>
-      <li class="cat"><a href="#"><img src="assets/img/cat-birds.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-bird"/></svg> Birds</span><p>Seed, cages &amp; treats</p></a></li>
-      <li class="cat"><a href="#"><img src="assets/img/cat-fish.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-fish"/></svg> Fish</span><p>Tanks, care &amp; feed</p></a></li>
-      <li class="cat"><a href="#"><img src="assets/img/cat-small-pets.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> Small Pets</span><p>Rabbits, hamsters &amp; more</p></a></li>
-      <li class="cat"><a href="#"><img src="assets/img/cat-food.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-bowl"/></svg> Food</span><p>Dry, wet &amp; raw diets</p></a></li>
-      <li class="cat"><a href="#"><img src="assets/img/cat-health.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> Health &amp; Care</span><p>Flea, tick &amp; grooming</p></a></li>
-      <li class="cat"><a href="#"><img src="assets/img/cat-accessories.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg> Accessories</span><p>Collars, bowls &amp; carriers</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-dogs.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="cat.dogs.l">Honden</span></span><p data-t="cat.dogs.d">Voeding, speelgoed, manden &amp; lijnen</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-cats.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-cat"/></svg> <span data-t="cat.cats.l">Katten</span></span><p data-t="cat.cats.d">Voeding, kattenbak &amp; spel</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-birds.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-bird"/></svg> <span data-t="cat.birds.l">Vogels</span></span><p data-t="cat.birds.d">Zaad, kooien &amp; snacks</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-fish.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-fish"/></svg> <span data-t="cat.fish.l">Vissen</span></span><p data-t="cat.fish.d">Aquaria, verzorging &amp; voer</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-small-pets.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="cat.small.l">Kleine Huisdieren</span></span><p data-t="cat.small.d">Konijnen, hamsters &amp; meer</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-food.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-bowl"/></svg> <span data-t="cat.food.l">Voeding</span></span><p data-t="cat.food.d">Droog, nat &amp; rauw</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-health.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg> <span data-t="cat.health.l">Gezondheid &amp; Verzorging</span></span><p data-t="cat.health.d">Vlooien, teken &amp; verzorging</p></a></li>
+      <li class="cat"><a href="#"><img src="assets/img/cat-accessories.svg" alt="" width="480" height="480" loading="lazy"><span class="cat__label"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg> <span data-t="cat.acc.l">Accessoires</span></span><p data-t="cat.acc.d">Halsbanden, bakjes &amp; manden</p></a></li>
     </ul>
   </div>
 </section>
@@ -191,51 +197,51 @@
 <section class="section" id="brands">
   <div class="wrap">
     <header class="sechead">
-      <h2>Brands We Stock</h2>
-      <p>Trusted names we've chosen ourselves — and can advise you on.</p>
+      <h2 data-t="brands.h2">Onze Merken</h2>
+      <p data-t="brands.sub">Betrouwbare namen die we zelf hebben gekozen — en waarover we je graag adviseren.</p>
     </header>
     <ul class="brands">
       <li>Royal Canin</li><li>Hill's</li><li>Beaphar</li><li>Purina</li>
       <li>Eukanuba</li><li>Trixie</li><li>Acana</li><li>Whiskas</li>
       <li>Frontline</li><li>Kong</li><li>Josera</li><li>Bunny Nature</li>
     </ul>
-    <p class="sechead__cta"><a class="btn btn--ghost" href="#">View All Brands</a></p>
+    <p class="sechead__cta"><a class="btn btn--ghost" href="#" data-t="brands.cta">Bekijk Alle Merken</a></p>
   </div>
 </section>
 
 <!-- ═══ SECTION 7+8 · Weather, tip & promotion ═══════════════════════ -->
-<section class="wrap section trio" aria-label="Today at 101 Pootjes">
+<section class="wrap section trio" aria-label="Vandaag bij 101 Pootjes">
 
   <article class="card weather">
-    <h2 class="card__eyebrow">Local Weather</h2>
+    <h2 class="card__eyebrow" data-t="weather.h2">Lokaal Weer</h2>
     <p class="weather__loc">Diemen, NL</p>
     <div class="weather__now">
       <span class="weather__ico" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-suncloud"/></svg></span>
-      <div><b>22°C</b><small>Partly Cloudy</small></div>
+      <div><b>22°C</b><small data-t="weather.cond">Half bewolkt</small></div>
     </div>
     <ul class="weather__days">
-      <li><span>Today</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></span><b>22°</b></li>
-      <li><span>Wed</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></span><b>24°</b></li>
-      <li><span>Thu</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><b>21°</b></li>
-      <li><span>Fri</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><b>20°</b></li>
+      <li><span data-t="weather.d1">Vandaag</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></span><b>22°</b></li>
+      <li><span data-t="weather.d2">Woe</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></span><b>24°</b></li>
+      <li><span data-t="weather.d3">Don</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><b>21°</b></li>
+      <li><span data-t="weather.d4">Vrij</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><b>20°</b></li>
     </ul>
   </article>
 
   <article class="card tip">
     <div class="tip__body">
-      <h2><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> Pet Tip of the Day</h2>
-      <p>Hot days can be tough on pets. Make sure they always have fresh water and shade.</p>
-      <a class="btn btn--primary" href="#">See Summer Essentials</a>
+      <h2><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="tip.h2">Diertip van de Dag</span></h2>
+      <p data-t="tip.text">Warme dagen kunnen zwaar zijn voor huisdieren. Zorg dat ze altijd vers water en schaduw hebben.</p>
+      <a class="btn btn--primary" href="#" data-t="tip.cta">Bekijk Zomer Essentials</a>
     </div>
-    <img src="assets/img/tip.svg" alt="A dog running on grass with a ball" width="800" height="520" loading="lazy">
+    <img src="assets/img/tip.svg" alt="Een hond rent met een bal over het gras" width="800" height="520" loading="lazy">
   </article>
 
   <article class="card promo">
-    <h2 class="card__eyebrow">This Month's Promotion</h2>
-    <p class="promo__deal">20% OFF</p>
-    <h3>Beaphar Flea &amp; Tick Protection Range</h3>
-    <p>Keep your pet protected all season long.</p>
-    <a class="btn btn--primary" href="#">View Promotion</a>
+    <h2 class="card__eyebrow" data-t="promo.eyebrow">Actie van de Maand</h2>
+    <p class="promo__deal" data-t="promo.deal">20% KORTING</p>
+    <h3 data-t="promo.h3">Beaphar Vlooien- &amp; Tekenbescherming</h3>
+    <p data-t="promo.text">Bescherm je huisdier het hele seizoen.</p>
+    <a class="btn btn--primary" href="#" data-t="promo.cta">Bekijk Actie</a>
     <img src="assets/img/promo.svg" alt="" width="700" height="520" loading="lazy">
   </article>
 </section>
@@ -243,15 +249,15 @@
 <!-- ═══ SECTION 9 · Salon ════════════════════════════════════════════ -->
 <section class="section" id="salon">
   <div class="wrap salon">
-    <img src="assets/img/salon.svg" alt="Inside the new grooming salon" width="1000" height="700" loading="lazy">
+    <img src="assets/img/salon.svg" alt="In de nieuwe trimsalon" width="1000" height="700" loading="lazy">
     <div class="salon__copy">
-      <p class="eyebrow">Coming Soon</p>
-      <h2>Professional Grooming Salon</h2>
-      <p>A calm, careful space for your pet — run by people who know them by name.</p>
+      <p class="eyebrow" data-t="salon.eyebrow">Binnenkort</p>
+      <h2 data-t="salon.h2">Professionele Trimsalon</h2>
+      <p data-t="salon.text">Een rustige, zorgvuldige plek voor je huisdier — geleid door mensen die ze bij naam kennen.</p>
       <ul class="ticks">
-        <li>Bathing</li><li>Nail Clipping</li><li>Breed Styling</li><li>Puppy Grooming</li>
+        <li data-t="salon.t1">Wassen</li><li data-t="salon.t2">Nagels Knippen</li><li data-t="salon.t3">Rasspecifiek Trimmen</li><li data-t="salon.t4">Puppytrimmen</li>
       </ul>
-      <a class="btn btn--primary btn--lg" href="#contact">Join the Waiting List</a>
+      <a class="btn btn--primary btn--lg" href="#contact" data-t="salon.cta">Schrijf je in voor de wachtlijst</a>
     </div>
   </div>
 </section>
@@ -260,23 +266,23 @@
 <section class="wrap section duo" id="events">
   <article class="card">
     <header class="card__head">
-      <h2><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> Upcoming Events</h2>
-      <a href="#">View all events →</a>
+      <h2><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="events.h2">Aankomende Evenementen</span></h2>
+      <a href="#" data-t="events.viewall">Bekijk alle evenementen →</a>
     </header>
     <ul class="events">
       <li>
         <time datetime="2026-06-01"><span>JUN</span><b>01</b></time>
-        <div><h3>Puppy Social Morning</h3><p class="meta">Sunday, 1 June • 10:00</p><p>A fun morning for pups and their people.</p></div>
+        <div><h3 data-t="ev1.title">Puppy Speelochtend</h3><p class="meta" data-t="ev1.time">Zondag 1 juni • 10:00</p><p data-t="ev1.text">Een gezellige ochtend voor pups en hun baasjes.</p></div>
         <img src="assets/img/event-1.svg" alt="" width="200" height="200" loading="lazy">
       </li>
       <li>
         <time datetime="2026-06-15"><span>JUN</span><b>15</b></time>
-        <div><h3>Free Nail Trim Day</h3><p class="meta">Sunday, 15 June • 10:00</p><p>Free nail trims for dogs. No appointment needed.</p></div>
+        <div><h3 data-t="ev2.title">Gratis Nagelknipdag</h3><p class="meta" data-t="ev2.time">Zondag 15 juni • 10:00</p><p data-t="ev2.text">Gratis nagels knippen voor honden. Geen afspraak nodig.</p></div>
         <img src="assets/img/event-2.svg" alt="" width="200" height="200" loading="lazy">
       </li>
       <li>
         <time datetime="2026-06-28"><span>JUN</span><b>28</b></time>
-        <div><h3>Dog First Aid Workshop</h3><p class="meta">Saturday, 28 June • 11:00</p><p>Learn essential first aid skills for your dog.</p></div>
+        <div><h3 data-t="ev3.title">Workshop Eerste Hulp bij Honden</h3><p class="meta" data-t="ev3.time">Zaterdag 28 juni • 11:00</p><p data-t="ev3.text">Leer essentiële eerste hulp voor je hond.</p></div>
         <img src="assets/img/event-3.svg" alt="" width="200" height="200" loading="lazy">
       </li>
     </ul>
@@ -284,15 +290,15 @@
 
   <article class="card">
     <header class="card__head">
-      <h2><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg> Follow Us on Instagram <small>@101pootjes</small></h2>
-      <a href="#">View all photos →</a>
+      <h2><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg> <span data-t="insta.h2">Volg Ons op Instagram</span> <small>@101pootjes</small></h2>
+      <a href="#" data-t="insta.viewall">Bekijk alle foto's →</a>
     </header>
     <ul class="insta">
-      <li><a href="#"><img src="assets/img/insta-1.svg" alt="Instagram post" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-2.svg" alt="Instagram post" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-3.svg" alt="Instagram post" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-4.svg" alt="Instagram post" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-5.svg" alt="Instagram post" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="#"><img src="assets/img/insta-1.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="#"><img src="assets/img/insta-2.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="#"><img src="assets/img/insta-3.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="#"><img src="assets/img/insta-4.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="#"><img src="assets/img/insta-5.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
     </ul>
   </article>
 </section>
@@ -300,37 +306,37 @@
 <!-- ═══ SECTION 11 · Visit us ════════════════════════════════════════ -->
 <section class="wrap section visit" id="contact">
   <div class="visit__addr">
-    <h2>Visit Our Store</h2>
-    <address>Kruidenhof 101<br>1112 XX Diemen<br>Netherlands</address>
-    <p class="muted">Free parking right in front of the shop.</p>
-    <a class="btn btn--primary" href="https://maps.google.com/?q=Kruidenhof+101+Diemen" target="_blank" rel="noopener">Get Directions →</a>
+    <h2 data-t="visit.store.h2">Bezoek Onze Winkel</h2>
+    <address>Kruidenhof 101<br>1112 XX Diemen<br>Nederland</address>
+    <p class="muted" data-t="visit.park">Gratis parkeren direct voor de winkel.</p>
+    <a class="btn btn--primary" href="https://maps.google.com/?q=Kruidenhof+101+Diemen" target="_blank" rel="noopener" data-t="visit.cta">Routebeschrijving →</a>
   </div>
 
   <div class="visit__map">
-    <!-- Replace with the Elementor Google Maps widget / an <iframe> embed -->
-    <img src="assets/img/map.svg" alt="Map showing 101 Pootjes at Kruidenhof 101, Diemen" width="1000" height="700" loading="lazy">
+    <!-- Vervang door de Elementor Google Maps-widget / een <iframe>-embed -->
+    <img src="assets/img/map.svg" alt="Kaart met 101 Pootjes aan Kruidenhof 101, Diemen" width="1000" height="700" loading="lazy">
   </div>
 
   <div class="visit__hours">
-    <h2>Opening Hours</h2>
+    <h2 data-t="visit.hours.h2">Openingstijden</h2>
     <table>
-      <tr><th>Monday</th><td>09:00 – 18:00</td></tr>
-      <tr><th>Tuesday</th><td>09:00 – 18:00</td></tr>
-      <tr><th>Wednesday</th><td>09:00 – 18:00</td></tr>
-      <tr><th>Thursday</th><td>09:00 – 18:00</td></tr>
-      <tr><th>Friday</th><td>09:00 – 18:00</td></tr>
-      <tr><th>Saturday</th><td>09:00 – 17:00</td></tr>
-      <tr><th>Sunday</th><td>Closed</td></tr>
+      <tr><th data-t="day.mon">Maandag</th><td>09:00 – 18:00</td></tr>
+      <tr><th data-t="day.tue">Dinsdag</th><td>09:00 – 18:00</td></tr>
+      <tr><th data-t="day.wed">Woensdag</th><td>09:00 – 18:00</td></tr>
+      <tr><th data-t="day.thu">Donderdag</th><td>09:00 – 18:00</td></tr>
+      <tr><th data-t="day.fri">Vrijdag</th><td>09:00 – 18:00</td></tr>
+      <tr><th data-t="day.sat">Zaterdag</th><td>09:00 – 17:00</td></tr>
+      <tr><th data-t="day.sun">Zondag</th><td data-t="visit.closed">Gesloten</td></tr>
     </table>
   </div>
 
   <div class="visit__contact">
-    <h2>Get in Touch</h2>
+    <h2 data-t="visit.contact.h2">Neem Contact Op</h2>
     <ul class="contactlist">
       <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+31201234567">+31 20 123 4567</a></li>
       <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@101pootjes.nl">info@101pootjes.nl</a></li>
-      <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><a href="https://wa.me/31201234567">WhatsApp Us</a></li>
-      <li><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg><a href="#">101 Pootjes Pet Shop</a></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><a href="https://wa.me/31201234567" data-t="visit.wa">WhatsApp Ons</a></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg><a href="#">101 Pootjes</a></li>
       <li><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg><a href="#">@101pootjes_petshop</a></li>
     </ul>
   </div>
@@ -343,18 +349,18 @@
   <div class="wrap footer__cols">
     <div>
       <img src="assets/img/logo.png" alt="101 Pootjes" width="149" height="149" class="footer__logo" loading="lazy">
-      <p>Your trusted local destination for quality products, expert advice and genuine care.</p>
+      <p data-t="footer.tagline">Jouw vertrouwde lokale adres voor kwaliteitsproducten, deskundig advies en oprechte zorg.</p>
     </div>
     <div>
-      <h3>Quick Links</h3>
-      <ul><li><a href="#about">About Us</a></li><li><a href="#products">Products</a></li><li><a href="#brands">Brands</a></li><li><a href="#salon">Salon</a></li><li><a href="#events">News &amp; Events</a></li><li><a href="#contact">Contact</a></li></ul>
+      <h3 data-t="footer.quick">Snelle Links</h3>
+      <ul><li><a href="#about" data-t="nav.about">Over Ons</a></li><li><a href="#products" data-t="nav.products">Producten</a></li><li><a href="#brands" data-t="nav.brands">Merken</a></li><li><a href="#salon" data-t="nav.salon">Trimsalon</a></li><li><a href="#events" data-t="nav.events">Nieuws &amp; Evenementen</a></li><li><a href="#contact" data-t="nav.contact">Contact</a></li></ul>
     </div>
     <div>
-      <h3>Opening Hours</h3>
-      <ul><li>Mon – Fri · 09:00 – 18:00</li><li>Saturday · 09:00 – 17:00</li><li>Sunday · Closed</li></ul>
+      <h3 data-t="footer.hours">Openingstijden</h3>
+      <ul><li data-t="footer.h1line">Ma – Vr · 09:00 – 18:00</li><li data-t="footer.h2line">Zaterdag · 09:00 – 17:00</li><li data-t="footer.h3line">Zondag · Gesloten</li></ul>
     </div>
     <div>
-      <h3>Follow Us</h3>
+      <h3 data-t="footer.follow">Volg Ons</h3>
       <ul class="socials socials--footer">
         <li><a href="#" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
         <li><a href="#" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
@@ -363,14 +369,14 @@
       <p><a href="tel:+31201234567">+31 20 123 4567</a><br><a href="mailto:info@101pootjes.nl">info@101pootjes.nl</a></p>
     </div>
   </div>
-  <div class="wrap footer__base"><p>© 2026 101 Pootjes. All rights reserved.</p></div>
+  <div class="wrap footer__base"><p data-t="footer.copyright">© 2026 101 Pootjes. Alle rechten voorbehouden.</p></div>
 </footer>
 
 <!-- Sticky mobile action bar -->
-<nav class="mobilebar" aria-label="Quick actions">
-  <a href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span>Call</span></a>
-  <a href="https://wa.me/31201234567"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
-  <a href="https://maps.google.com/?q=Kruidenhof+101+Diemen"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Directions</span></a>
+<nav class="mobilebar" aria-label="Snelle acties">
+  <a href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-t="mob.call">Bel</span></a>
+  <a href="https://wa.me/31201234567"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span data-t="mob.wa">WhatsApp</span></a>
+  <a href="https://maps.google.com/?q=Kruidenhof+101+Diemen"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-t="mob.route">Route</span></a>
 </nav>
 
 <script src="script.js"></script>

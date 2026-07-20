@@ -1,21 +1,142 @@
-/* 101 Pootjes — minimal progressive enhancement.
-   Kept tiny on purpose (Lighthouse: minimal JS). In the WordPress build
-   the header/menu behaviour comes from Elementor; this mirrors it for the
-   static prototype only. */
+/* 101 Pootjes — minimal progressive enhancement + NL/EN language toggle.
+   Kept tiny on purpose (Lighthouse: minimal JS).
+
+   In the WordPress build the header/menu behaviour comes from Elementor and
+   translation from Weglot. This script mirrors both for the static prototype:
+   the site defaults to Dutch, the NL/EN switch translates the page in place,
+   and the choice is remembered in localStorage. */
 (function () {
   "use strict";
 
-  // Shadow on the sticky header once the page scrolls.
+  /* ── Translations. Dutch is the source language (matches the HTML). ── */
+  var I18N = {
+    en: {
+      "skip": "Skip to content",
+      "nav.home": "Home", "nav.about": "About Us", "nav.products": "Products",
+      "nav.brands": "Brands", "nav.salon": "Salon", "nav.events": "News &amp; Events",
+      "nav.contact": "Contact", "nav.call": "Call Us", "pill.soon": "Coming Soon",
+
+      "hero.h1": 'Everything<br>your pet needs,<br><em>with love.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg>',
+      "hero.sub": "Premium food, trusted advice and friendly local service for every tail and paw.",
+      "hero.visit": "Visit Our Store", "hero.contact": "Contact Us",
+
+      "salonbadge.eyebrow": "Coming Soon!",
+      "salonbadge.title": "Professional<br>Grooming Salon",
+      "salonbadge.text": "Pampering, care and style for your best friend.",
+      "salonbadge.cta": "Join the Waiting List",
+
+      "qb.store.title": "Visit Our Store",
+      "qb.open.title": "Open Today", "qb.open.status": "We are open",
+      "qb.call.title": "Call Us", "qb.call.text": "We're here to help",
+      "qb.park.title": "Free Parking", "qb.park.text": "Plenty of parking<br>right in front",
+
+      "about.eyebrow": "About 101 Pootjes",
+      "about.h2": "About me",
+      "about.p1": "My love for animals began at an early age and has grown over the years into both my profession and my passion. Working with and for animals gives me energy every day – no two days are the same, and every animal has its own character.",
+      "about.p2": "I trained in animal management and am also a qualified veterinary assistant (paraveterinarian). Through my experience in a pet specialty store, a veterinary practice and pet insurance, I've built up broad knowledge of nutrition, health, behaviour and care. I put that knowledge to use every day in the shop, where I'm always happy to help owners with honest, suitable and expert advice.",
+      "about.p3": "At home I have my cat Liam, one year old. He loves getting into mischief and brings a smile to my face every single day.",
+
+      "offer.h2": "What We Offer",
+      "offer.advice.h3": "Expert Advice", "offer.advice.p": "Knowledgeable help for every stage of life.",
+      "offer.brands.h3": "Premium Brands", "offer.brands.p": "We stock trusted brands you can rely on.",
+      "offer.service.h3": "Friendly Service", "offer.service.p": "Personal, local service with a smile.",
+
+      "cat.title": "Shop by Category",
+      "cat.dogs.l": "Dogs", "cat.dogs.d": "Food, toys, beds &amp; leads",
+      "cat.cats.l": "Cats", "cat.cats.d": "Nutrition, litter &amp; play",
+      "cat.birds.l": "Birds", "cat.birds.d": "Seed, cages &amp; treats",
+      "cat.fish.l": "Fish", "cat.fish.d": "Tanks, care &amp; feed",
+      "cat.small.l": "Small Pets", "cat.small.d": "Rabbits, hamsters &amp; more",
+      "cat.food.l": "Food", "cat.food.d": "Dry, wet &amp; raw diets",
+      "cat.health.l": "Health &amp; Care", "cat.health.d": "Flea, tick &amp; grooming",
+      "cat.acc.l": "Accessories", "cat.acc.d": "Collars, bowls &amp; carriers",
+
+      "brands.h2": "Brands We Stock",
+      "brands.sub": "Trusted names we've chosen ourselves — and can advise you on.",
+      "brands.cta": "View All Brands",
+
+      "weather.h2": "Local Weather", "weather.cond": "Partly Cloudy",
+      "weather.d1": "Today", "weather.d2": "Wed", "weather.d3": "Thu", "weather.d4": "Fri",
+
+      "tip.h2": "Pet Tip of the Day",
+      "tip.text": "Hot days can be tough on pets. Make sure they always have fresh water and shade.",
+      "tip.cta": "See Summer Essentials",
+
+      "promo.eyebrow": "This Month's Promotion", "promo.deal": "20% OFF",
+      "promo.h3": "Beaphar Flea &amp; Tick Protection Range",
+      "promo.text": "Keep your pet protected all season long.",
+      "promo.cta": "View Promotion",
+
+      "salon.eyebrow": "Coming Soon", "salon.h2": "Professional Grooming Salon",
+      "salon.text": "A calm, careful space for your pet — run by people who know them by name.",
+      "salon.t1": "Bathing", "salon.t2": "Nail Clipping", "salon.t3": "Breed Styling", "salon.t4": "Puppy Grooming",
+      "salon.cta": "Join the Waiting List",
+
+      "events.h2": "Upcoming Events", "events.viewall": "View all events →",
+      "ev1.title": "Puppy Social Morning", "ev1.time": "Sunday, 1 June • 10:00", "ev1.text": "A fun morning for pups and their people.",
+      "ev2.title": "Free Nail Trim Day", "ev2.time": "Sunday, 15 June • 10:00", "ev2.text": "Free nail trims for dogs. No appointment needed.",
+      "ev3.title": "Dog First Aid Workshop", "ev3.time": "Saturday, 28 June • 11:00", "ev3.text": "Learn essential first aid skills for your dog.",
+
+      "insta.h2": "Follow Us on Instagram", "insta.viewall": "View all photos →",
+
+      "visit.store.h2": "Visit Our Store",
+      "visit.park": "Free parking right in front of the shop.",
+      "visit.cta": "Get Directions →",
+      "visit.hours.h2": "Opening Hours", "visit.closed": "Closed",
+      "visit.contact.h2": "Get in Touch", "visit.wa": "WhatsApp Us",
+      "day.mon": "Monday", "day.tue": "Tuesday", "day.wed": "Wednesday", "day.thu": "Thursday",
+      "day.fri": "Friday", "day.sat": "Saturday", "day.sun": "Sunday",
+
+      "footer.tagline": "Your trusted local destination for quality products, expert advice and genuine care.",
+      "footer.quick": "Quick Links", "footer.hours": "Opening Hours", "footer.follow": "Follow Us",
+      "footer.h1line": "Mon – Fri · 09:00 – 18:00", "footer.h2line": "Saturday · 09:00 – 17:00", "footer.h3line": "Sunday · Closed",
+      "footer.copyright": "© 2026 101 Pootjes. All rights reserved.",
+
+      "mob.call": "Call", "mob.wa": "WhatsApp", "mob.route": "Directions"
+    }
+  };
+
+  /* Capture the Dutch source straight from the DOM so we never duplicate it. */
+  var nl = {};
+  document.querySelectorAll("[data-t]").forEach(function (el) {
+    nl[el.getAttribute("data-t")] = el.innerHTML;
+  });
+  I18N.nl = nl;
+
+  function applyLang(lang) {
+    if (!I18N[lang]) lang = "nl";
+    var dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-t]").forEach(function (el) {
+      var v = dict[el.getAttribute("data-t")];
+      if (v != null) el.innerHTML = v;
+    });
+    document.querySelectorAll(".langswitch button").forEach(function (b) {
+      b.classList.toggle("is-active", b.getAttribute("data-lang") === lang);
+    });
+    try { localStorage.setItem("pootjes-lang", lang); } catch (e) {}
+  }
+
+  document.querySelectorAll(".langswitch").forEach(function (sw) {
+    sw.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (b) applyLang(b.getAttribute("data-lang"));
+    });
+  });
+
+  var saved = "nl";
+  try { saved = localStorage.getItem("pootjes-lang") || "nl"; } catch (e) {}
+  if (saved !== "nl") applyLang(saved);   // NL is already in the DOM
+
+  /* ── Sticky header shadow ──────────────────────────────────────── */
   var header = document.getElementById("header");
   if (header) {
-    var onScroll = function () {
-      header.classList.toggle("is-stuck", window.scrollY > 8);
-    };
+    var onScroll = function () { header.classList.toggle("is-stuck", window.scrollY > 8); };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  // Mobile menu toggle.
+  /* ── Mobile menu ───────────────────────────────────────────────── */
   var burger = document.getElementById("burger");
   var nav = document.getElementById("nav");
   if (burger && nav) {
@@ -26,24 +147,11 @@
     burger.addEventListener("click", function () {
       setOpen(burger.getAttribute("aria-expanded") !== "true");
     });
-    // Close after tapping a link, and on resize back to desktop.
     nav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) setOpen(false);
+      if (e.target.closest("a")) setOpen(false);   // close after tapping a link
     });
     window.addEventListener("resize", function () {
       if (window.innerWidth > 980) setOpen(false);
-    });
-  }
-
-  // Language switcher demo state (Weglot replaces this in production).
-  var langswitch = document.getElementById("weglot_here");
-  if (langswitch) {
-    langswitch.addEventListener("click", function (e) {
-      var btn = e.target.closest("button");
-      if (!btn) return;
-      langswitch.querySelectorAll("button").forEach(function (b) {
-        b.classList.toggle("is-active", b === btn);
-      });
     });
   }
 })();
