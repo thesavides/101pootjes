@@ -558,11 +558,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .announce--salon { background: linear-gradient(155deg, #faf5ec, #efe3ce); border: 1px solid #e7d8bd; }
 .announce--salon .announce__logo {
-  position: absolute; top: 16px; right: 16px; width: 92px; height: 92px;
+  display: block; width: 124px; height: 124px; margin: 4px 0 14px;
   border-radius: 50%; box-shadow: var(--shadow-md); background: #fff; object-fit: contain;
-  border: 2px solid #fff;
+  border: 3px solid #fff;
 }
-.announce--salon h2 { font-size: 1.28rem; margin: 2px 0 10px; max-width: 12ch; color: #5c4526; }
+.announce--salon h2 { font-size: 1.28rem; margin: 2px 0 10px; color: #5c4526; }
 .announce--salon p { font-size: .9rem; color: #6b5a42; margin-bottom: 12px; }
 .announce__disclaimer { margin: 0 0 14px; font-size: .76rem; }
 .announce__disclaimer a { color: var(--c-salon); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
