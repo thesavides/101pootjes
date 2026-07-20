@@ -10,10 +10,21 @@ Elementor Pro build — not the production site.
 |------|---------|
 | `index.html` | Homepage — all 12 sections from the Phase 1 brief |
 | `styles.css` | Design system + layout. Tokens at the top mirror Elementor Global Colours/Fonts |
-| `script.js` | Sticky-header shadow + mobile menu (Elementor handles this in production) |
-| `assets/img/` | Logo (real) + labelled SVG placeholders for every photo slot |
+| `script.js` | Sticky-header shadow + mobile menu + NL/EN toggle (Elementor + Weglot handle these in production) |
+| `assets/img/` | Logo, salon banner, category tiles + SVG placeholders for photo slots |
+| `assets/img/brands/` | Real manufacturer logos (from the `logo images/` source folder) |
 | `assets/sprite.html` | Source of the inlined SVG icon set |
 | `assets/make-placeholders.sh` | Regenerates the placeholder images |
+
+## Known asset fixes for launch
+
+- **`brands/purina.png` and `brands/whiskas.jpeg`** have a checkerboard
+  transparency pattern flattened into the file — replace with clean
+  transparent PNGs (they show faint grey squares on the white tiles).
+- **Category tiles** (`cat-*.svg`) are generic icon artwork. Swap for real
+  product/animal photography when available — same filenames, no markup change.
+- **`salon-banner.png`** is Manon's Vachtatelier branding for the grooming
+  section.
 
 ## Viewing it
 
