@@ -178,9 +178,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 /* ══ SECTION 2 · Hero (announcement + two promotions, no image) ═══ */
 .hero { background: var(--grey-light); padding-block: clamp(26px, 4vw, 48px); }
-.hero__head { text-align: center; max-width: 720px; margin: 0 auto clamp(22px, 3vw, 34px); }
-.hero__head h1 { margin-bottom: 8px; }
-.hero__head p { font-size: 1.04rem; color: #4b5563; margin: 0; }
+/* Compact headline: two full-width lines (h1 + tagline), minimal height */
+.hero__head { text-align: center; max-width: none; margin: 0 0 clamp(18px, 2.5vw, 26px); }
+.hero__head h1 { font-size: clamp(1.5rem, 1rem + 2vw, 2.35rem); margin-bottom: 4px; }
+.hero__head p { font-size: clamp(.92rem, .85rem + .3vw, 1.05rem); color: #4b5563; margin: 0; }
 .hero h1 em { font-style: normal; color: var(--green); }
 .hero h1 .ico { color: var(--green); width: .78em; height: .78em; }
 .hero__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
@@ -321,7 +322,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ══ SECTION 10 · Events + Instagram ═════════════════════════════ */
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: start; }
 
-.events li { display: grid; grid-template-columns: 54px 1fr 64px; gap: 16px; align-items: center; padding: 14px 0; }
+.events li { display: grid; grid-template-columns: 54px 1fr 88px; gap: 16px; align-items: center; padding: 14px 0; }
 .events li + li { border-top: 1px solid var(--line); }
 .events time { display: grid; place-items: center; padding: 8px 0; border-radius: var(--r-sm);
                background: var(--green-soft); color: var(--green-dark); line-height: 1.1; }
@@ -330,7 +331,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .events h3 { margin: 0 0 2px; font-size: .95rem; }
 .events .meta { font-size: .78rem; color: var(--green); margin: 0 0 2px; font-weight: 500; }
 .events p:last-child { font-size: .82rem; color: var(--text-muted); margin: 0; }
-.events img { width: 64px; height: 64px; border-radius: var(--r-sm); object-fit: cover; }
+.events img { width: 88px; height: 66px; border-radius: var(--r-sm); object-fit: cover; }
 
 .insta { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
 .insta img { aspect-ratio: 1; width: 100%; object-fit: cover; border-radius: var(--r-sm); transition: transform .2s, filter .2s; }
@@ -560,7 +561,11 @@ ul { list-style: none; margin: 0; padding: 0; }
   box-shadow: 0 6px 16px rgba(126,87,194,.4);
 }
 .announce--salon .announce__icon .ico { width: 22px; height: 22px; }
-.announce--salon h2 { font-size: 1.28rem; margin: 2px 0 10px; max-width: 15ch; }
+.announce--salon .announce__logo {
+  position: absolute; top: 18px; right: 18px; width: 64px; height: 64px;
+  border-radius: 50%; box-shadow: var(--shadow); background: #fff;
+}
+.announce--salon h2 { font-size: 1.28rem; margin: 2px 0 10px; max-width: 13ch; }
 .announce--salon p { font-size: .9rem; color: var(--text-muted); margin-bottom: 16px; }
 .announce__contact { display: flex; gap: 8px; margin-top: auto; flex-wrap: wrap; }
 .announce__contact .btn { flex: 1; }
