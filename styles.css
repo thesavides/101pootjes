@@ -110,7 +110,9 @@ ul { list-style: none; margin: 0; padding: 0; }
   box-shadow: var(--shadow); padding: 28px;
 }
 .card__eyebrow { font-family: var(--font-head); font-weight: 600; color: var(--green); margin: 0 0 4px; }
-.card__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.card__head { display: flex; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 18px; flex-wrap: wrap; }
+/* Prevent grid children (cards) from overflowing narrow viewports */
+.duo > .card, .hero__cards > *, .visit > * { min-width: 0; }
 .card__head h2 { margin: 0; display: flex; align-items: center; gap: .5em; }
 .card__head h2 small { font-weight: 500; color: var(--text-muted); font-family: var(--font-body); font-size: .85rem; }
 .card__head a { color: var(--green); font-weight: 600; font-size: .88rem; white-space: nowrap; }
@@ -672,4 +674,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (max-width: 560px) {
   .prodbanner__pets span { width: 48px; height: 48px; }
   .prodbanner__pets .ico { width: 26px; height: 26px; }
+  /* Quick-info bar: single column so labels & phone number don't get cramped */
+  .quickbar { grid-template-columns: 1fr; padding: 12px 6px; gap: 0; }
+  .quickbar li { padding: 14px 18px; }
+  .quickbar li + li { border-left: 0; border-top: 1px solid rgba(103,179,46,.22); }
 }
