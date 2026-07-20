@@ -596,9 +596,11 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: var(--r); box-shadow: var(--shadow); overflow: hidden;
 }
 .prodcat summary {
-  display: flex; align-items: center; gap: 12px; padding: 16px 18px; cursor: pointer;
+  display: flex; align-items: center; gap: 12px; padding: 14px 18px; cursor: pointer;
+  min-height: 74px;   /* uniform header height even when the name wraps to 2 lines */
   font-family: var(--font-head); font-weight: 600; list-style: none;
 }
+.prodcat__name { line-height: 1.2; }
 .prodcat summary::-webkit-details-marker { display: none; }
 .prodcat summary:hover { background: color-mix(in srgb, var(--accent) 6%, #fff); }
 .prodcat__ic {
