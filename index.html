@@ -113,49 +113,12 @@
 
 <main id="main">
 
-<!-- ═══ SECTION 2 · Hero (announcement + two promotions) ════════════ -->
+<!-- ═══ SECTION 2 · Hero (main heading) ══════════════════════════════ -->
 <section class="hero">
   <div class="wrap">
     <div class="hero__head">
       <h1 data-t="hero.h1">Alles wat je huisdier nodig heeft, <em>met liefde.</em> <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></h1>
       <p data-t="hero.sub">Premium voeding, betrouwbaar advies en vriendelijke, lokale service voor elke poot en staart.</p>
-    </div>
-
-    <div class="hero__cards">
-      <!-- ▸ Reusable announcement slot — replace content for future announcements -->
-      <aside class="announce announce--salon">
-        <span class="announce__tag" data-t="salonbadge.tag">✨ Binnenkort</span>
-        <img class="announce__logo" src="assets/img/manon-logo.png" alt="Manon's Vachtatelier" width="124" height="124" loading="lazy">
-        <h2 data-t="salonbadge.title">Onze Trimsalon opent binnenkort!</h2>
-        <p data-t="salonbadge.text">Wassen, knippen en verwennen — professionele verzorging voor je beste vriend.</p>
-        <p class="announce__disclaimer"><a href="#salon-disclaimer" data-t="salonbadge.disclaimer">Let op: zelfstandige salon — lees meer ↓</a></p>
-        <div class="announce__contact">
-          <a class="btn btn--salon btn--sm" href="https://wa.me/31651755091" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> <span data-t="contact.wa">WhatsApp</span></a>
-          <a class="btn btn--ghost btn--sm" href="mailto:manonsvachtatelier@icloud.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> <span data-t="contact.email">E-mail</span></a>
-        </div>
-      </aside>
-
-      <!-- ▸ Promotion of the month -->
-      <aside class="announce announce--promo">
-        <img class="announce__img" src="assets/img/promo.jpg" alt="Natural Health Steamed kattenvoeding" width="1000" height="708" loading="lazy">
-        <div class="announce__promo-body">
-          <span class="announce__tag announce__tag--food" data-t="promo.eyebrow">Actie van de Maand</span>
-          <p class="announce__deal" data-t="promo.deal">4 + 1 GRATIS</p>
-          <h3 data-t="promo.h3">Natural Health Steamed</h3>
-          <a class="btn btn--food btn--sm" href="#contact" data-t="promo.cta">Kom Langs</a>
-        </div>
-      </aside>
-
-      <!-- ▸ Staff recommendation / second promotion slot -->
-      <aside class="announce announce--promo">
-        <img class="announce__img" src="assets/img/promo2.jpg" alt="Thrive Complete kattenvoeding" width="594" height="507" loading="lazy">
-        <div class="announce__promo-body">
-          <span class="announce__tag announce__tag--fish" data-t="promo2.eyebrow">Onze Aanrader</span>
-          <p class="announce__deal announce__deal--fish" data-t="promo2.h3">Thrive Complete</p>
-          <h3 data-t="promo2.text">100% natuurlijke kattenvoeding</h3>
-          <a class="btn btn--fish btn--sm" href="#contact" data-t="promo2.cta">Kom Langs</a>
-        </div>
-      </aside>
     </div>
   </div>
 </section>
@@ -165,7 +128,7 @@
   <img src="assets/img/store.jpg" alt="Binnenkijken in de winkel van 101 Pootjes in winkelcentrum Diemerplein" width="1920" height="440" loading="lazy">
 </section>
 
-<!-- ═══ SECTION 3 · Store detail (quick info bar) ════════════════════ -->
+<!-- ═══ SECTION 2c · Store detail (quick info bar) ═══════════════════ -->
 <section class="wrap" aria-label="Winkelinformatie">
   <ul class="quickbar">
     <li><span class="qi qi--dog"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3 data-t="qb.store.title">Bezoek Onze Winkel</h3><p>Diemerplein 174<br>1111 JD Diemen</p></div></li>
@@ -173,6 +136,48 @@
     <li><span class="qi qi--fish"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3 data-t="qb.call.title">Bel Ons</h3><p><a href="tel:+31201234567">+31 20 123 4567</a><br><span data-t="qb.call.text">We helpen je graag</span></p></div></li>
     <li><span class="qi qi--food"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></span><div><h3 data-t="qb.park.title">Parkeren</h3><p data-t="qb.park.text">In de parkeergarage van<br>winkelcentrum Diemerplein</p></div></li>
   </ul>
+</section>
+
+<div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
+
+<!-- ═══ SECTION 2d · Announcement + two promotions (three cards) ═════ -->
+<section class="wrap herocards">
+  <div class="hero__cards">
+    <!-- ▸ Reusable announcement slot — replace content for future announcements -->
+    <aside class="announce announce--salon">
+      <span class="announce__tag" data-t="salonbadge.tag">✨ Binnenkort</span>
+      <img class="announce__logo" src="assets/img/manon-logo.png" alt="Manon's Vachtatelier" width="124" height="124" loading="lazy">
+      <h2 data-t="salonbadge.title">Onze Trimsalon opent binnenkort!</h2>
+      <p data-t="salonbadge.text">Wassen, knippen en verwennen — professionele verzorging voor je beste vriend.</p>
+      <p class="announce__disclaimer"><a href="#salon-disclaimer" data-t="salonbadge.disclaimer">Let op: zelfstandige salon — lees meer ↓</a></p>
+      <div class="announce__contact">
+        <a class="btn btn--salon btn--sm" href="https://wa.me/31651755091" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> <span data-t="contact.wa">WhatsApp</span></a>
+        <a class="btn btn--ghost btn--sm" href="mailto:manonsvachtatelier@icloud.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> <span data-t="contact.email">E-mail</span></a>
+      </div>
+    </aside>
+
+    <!-- ▸ Promotion of the month -->
+    <aside class="announce announce--promo">
+      <img class="announce__img" src="assets/img/promo.jpg" alt="Natural Health Steamed kattenvoeding" width="1000" height="708" loading="lazy">
+      <div class="announce__promo-body">
+        <span class="announce__tag announce__tag--food" data-t="promo.eyebrow">Actie van de Maand</span>
+        <p class="announce__deal" data-t="promo.deal">4 + 1 GRATIS</p>
+        <h3 data-t="promo.h3">Natural Health Steamed</h3>
+        <a class="btn btn--food btn--sm" href="#contact" data-t="promo.cta">Kom Langs</a>
+      </div>
+    </aside>
+
+    <!-- ▸ Staff recommendation / second promotion slot -->
+    <aside class="announce announce--promo">
+      <img class="announce__img" src="assets/img/promo2.jpg" alt="Thrive Complete kattenvoeding" width="594" height="507" loading="lazy">
+      <div class="announce__promo-body">
+        <span class="announce__tag announce__tag--fish" data-t="promo2.eyebrow">Onze Aanrader</span>
+        <p class="announce__deal announce__deal--fish" data-t="promo2.h3">Thrive Complete</p>
+        <h3 data-t="promo2.text">100% natuurlijke kattenvoeding</h3>
+        <a class="btn btn--fish btn--sm" href="#contact" data-t="promo2.cta">Kom Langs</a>
+      </div>
+    </aside>
+  </div>
 </section>
 
 <div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
