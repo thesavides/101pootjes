@@ -11,6 +11,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<!-- ═══ Google Analytics + Consent Mode v2 ═══════════════════════════
+     Replace G-XXXXXXXXXX (BOTH places below) with your GA4 Measurement ID.
+     Analytics stays OFF until the visitor clicks "Alles accepteren". -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+    analytics_storage: 'denied', wait_for_update: 500
+  });
+  try {
+    if (localStorage.getItem('pootjes-consent') === 'all') {
+      gtag('consent', 'update', {
+        ad_storage: 'granted', ad_user_data: 'granted',
+        ad_personalization: 'granted', analytics_storage: 'granted'
+      });
+    }
+  } catch (e) {}
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 </head>
 <body>
 
@@ -110,7 +133,7 @@
       <thead><tr><th>Type</th><th>Doel</th><th>Toestemming</th></tr></thead>
       <tbody>
         <tr><td>Noodzakelijk</td><td>Onthoudt je taalkeuze en cookievoorkeur</td><td>Altijd actief</td></tr>
-        <tr><td>Analytisch</td><td>Anoniem meten van websitegebruik</td><td>Na toestemming</td></tr>
+        <tr><td>Analytisch</td><td>Google Analytics — anoniem meten van websitegebruik (Google Consent Mode)</td><td>Na toestemming</td></tr>
         <tr><td>Marketing / Social</td><td>Facebook-content en gedeelde berichten</td><td>Na toestemming</td></tr>
       </tbody>
     </table>

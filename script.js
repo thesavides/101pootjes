@@ -190,10 +190,19 @@
 
     if (!get()) show();
 
+    // Tell Google Consent Mode about the choice (no-op if gtag isn't present).
+    var gconsent = function (granted) {
+      if (typeof window.gtag !== "function") return;
+      var v = granted ? "granted" : "denied";
+      window.gtag("consent", "update", {
+        ad_storage: v, ad_user_data: v, ad_personalization: v, analytics_storage: v
+      });
+    };
+
     var accept = document.getElementById("cookie-accept");
     var decline = document.getElementById("cookie-decline");
-    if (accept) accept.addEventListener("click", function () { set("all"); hide(); });
-    if (decline) decline.addEventListener("click", function () { set("necessary"); hide(); });
+    if (accept) accept.addEventListener("click", function () { set("all"); gconsent(true); hide(); });
+    if (decline) decline.addEventListener("click", function () { set("necessary"); gconsent(false); hide(); });
 
     var reopen = document.getElementById("cookie-settings");
     if (reopen) reopen.addEventListener("click", function () { show(); });
