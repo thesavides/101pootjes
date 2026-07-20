@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="480" height="480" role="img" aria-label="">
   <defs><linearGradient id="g_catfood" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#eef3e6"/><stop offset="1" stop-color="#dfe9cf"/>
+    <stop offset="0" stop-color="#fff1ec"/><stop offset="1" stop-color="#ffe2d9"/>
   </linearGradient></defs>
   <rect width="100" height="100" fill="url(#g_catfood)"/>
-  <circle cx="50" cy="50" r="27" fill="#ffffff" opacity=".55"/>
-  <g transform="translate(28,28) scale(1.83)" fill="none" stroke="#5f9e28" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.4 11h17.2a8.6 8.6 0 0 1-8.6 7.6A8.6 8.6 0 0 1 3.4 11z"/><path d="M8 8.2c0-1.4 1-2.2 2.2-2.2M13 8.2c0-1.4 1-2.2 2.2-2.2"/></g>
+  <circle cx="50" cy="50" r="27" fill="#ffffff" opacity=".6"/>
+  <g transform="translate(28,28) scale(1.83)" fill="none" stroke="#FF7043" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.4 11h17.2a8.6 8.6 0 0 1-8.6 7.6A8.6 8.6 0 0 1 3.4 11z"/><path d="M8 8.2c0-1.4 1-2.2 2.2-2.2M13 8.2c0-1.4 1-2.2 2.2-2.2"/></g>
 </svg>

@@ -62,10 +62,10 @@
       "tip.text": "Hot days can be tough on pets. Make sure they always have fresh water and shade.",
       "tip.cta": "See Summer Essentials",
 
-      "promo.eyebrow": "This Month's Promotion", "promo.deal": "20% OFF",
-      "promo.h3": "Beaphar Flea &amp; Tick Protection Range",
-      "promo.text": "Keep your pet protected all season long.",
-      "promo.cta": "View Promotion",
+      "promo.eyebrow": "This Month's Promotion", "promo.deal": "4 + 1 FREE",
+      "promo.h3": "Natural Health Steamed",
+      "promo.text": "Slow-cooked complete cat food — now 4+1 free.",
+      "promo.cta": "Drop By",
 
       "salon.eyebrow": "Coming Soon", "salon.h2": "Professional Grooming Salon",
       "salon.text": "A calm, careful space for your pet — run by people who know them by name.",
@@ -77,10 +77,21 @@
       "ev2.title": "Free Nail Trim Day", "ev2.time": "Sunday, 15 June • 10:00", "ev2.text": "Free nail trims for dogs. No appointment needed.",
       "ev3.title": "Dog First Aid Workshop", "ev3.time": "Saturday, 28 June • 11:00", "ev3.text": "Learn essential first aid skills for your dog.",
 
-      "insta.h2": "Follow Us on Instagram", "insta.viewall": "View all photos →",
+      "fb.h2": "Follow Us on Facebook", "fb.viewall": "Visit our page →",
+
+      "donate.partner": "Dierenasiel Oostzaan (cat shelter)",
+      "donate.h2": "Donate",
+      "donate.sub": "And help the cats of Dierenasiel Oostzaan",
+      "donate.lead": "They can really use these items:",
+      "donate.i1.t": "Liquid snacks", "donate.i1.d": "The best snacks for socialising cats",
+      "donate.i2.t": "Cat wand toy", "donate.i2.d": "Play helps reduce stress",
+      "donate.i3.t": "Wet food", "donate.i3.d": "All flavours and brands are welcome",
+      "donate.i4.t": "Cat litter", "donate.i4.d": "A bag or a contribution can be paid at the till",
+      "donate.note": "Other snacks and toys are very welcome too.",
+      "donate.discount": "All donated items receive", "donate.discountb": "15% off", "donate.discount2": "at the till.",
 
       "visit.store.h2": "Visit Our Store",
-      "visit.park": "Free parking right in front of the shop.",
+      "visit.park": "In the heart of the Diemerplein shopping centre.",
       "visit.cta": "Get Directions →",
       "visit.hours.h2": "Opening Hours", "visit.closed": "Closed",
       "visit.contact.h2": "Get in Touch", "visit.wa": "WhatsApp Us",
@@ -92,7 +103,12 @@
       "footer.h1line": "Mon – Fri · 09:00 – 18:00", "footer.h2line": "Saturday · 09:00 – 17:00", "footer.h3line": "Sunday · Closed",
       "footer.copyright": "© 2026 101 Pootjes. All rights reserved.",
 
-      "mob.call": "Call", "mob.wa": "WhatsApp", "mob.route": "Directions"
+      "mob.call": "Call", "mob.wa": "WhatsApp", "mob.route": "Directions",
+
+      "legal.terms": "Terms &amp; Conditions", "legal.privacy": "Privacy &amp; Cookies",
+      "legal.cookiesettings": "Cookie settings",
+      "cookie.text": "We use cookies to improve the website and analyse traffic. The choice is yours.",
+      "cookie.decline": "Necessary only", "cookie.accept": "Accept all", "cookie.more": "More information"
     }
   };
 
@@ -153,5 +169,27 @@
     window.addEventListener("resize", function () {
       if (window.innerWidth > 980) setOpen(false);
     });
+  }
+
+  /* ── Cookie consent ────────────────────────────────────────────
+     Prototype only. In production a consent plugin (e.g. Complianz)
+     should gate analytics/marketing scripts on this choice. */
+  var cookie = document.getElementById("cookie");
+  if (cookie) {
+    var KEY = "pootjes-consent";
+    var get = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+    var set = function (v) { try { localStorage.setItem(KEY, v); } catch (e) {} };
+    var show = function () { cookie.hidden = false; };
+    var hide = function () { cookie.hidden = true; };
+
+    if (!get()) show();
+
+    var accept = document.getElementById("cookie-accept");
+    var decline = document.getElementById("cookie-decline");
+    if (accept) accept.addEventListener("click", function () { set("all"); hide(); });
+    if (decline) decline.addEventListener("click", function () { set("necessary"); hide(); });
+
+    var reopen = document.getElementById("cookie-settings");
+    if (reopen) reopen.addEventListener("click", function () { show(); });
   }
 })();

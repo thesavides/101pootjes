@@ -1,8 +1,19 @@
 # 101 Pootjes — Website (Phase 1)
 
 Static HTML/CSS prototype of the homepage for **101 Pootjes**, an independent
-pet shop in Diemen, NL. This is the visual reference for the WordPress +
-Elementor Pro build — not the production site.
+pet shop at **Diemerplein 174, 1111 JD Diemen, NL**. This is the visual
+reference for the WordPress + Elementor Pro build — not the production site.
+
+**Social:** Facebook only (no Instagram) —
+`https://www.facebook.com/profile.php?id=61587038973940`
+
+**Category accent colours** come from `101 Pootjes Design System.pdf`
+(dog green, cat amber, bird cyan, fish blue, small-pets purple, food
+deep-orange, health red, accessories deep-purple).
+
+Pages: `index.html` (homepage) · `terms.html` (Algemene Voorwaarden + Privacy/Cookies).
+The homepage includes a working cookie-consent banner and a free OpenStreetMap
+embed (swap for the Elementor Google Maps widget in WP).
 
 ## What's here
 

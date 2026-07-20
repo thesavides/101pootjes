@@ -19,14 +19,16 @@
   "image": "https://101pootjes.nl/assets/img/logo.png",
   "telephone": "+31201234567",
   "email": "info@101pootjes.nl",
+  "url": "https://101pootjes.nl",
+  "sameAs": ["https://www.facebook.com/profile.php?id=61587038973940"],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Kruidenhof 101",
-    "postalCode": "1112 XX",
+    "streetAddress": "Diemerplein 174",
+    "postalCode": "1111 JD",
     "addressLocality": "Diemen",
     "addressCountry": "NL"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 52.3392, "longitude": 4.9622 },
+  "geo": { "@type": "GeoCoordinates", "latitude": 52.3396, "longitude": 4.9636 },
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
@@ -69,7 +71,7 @@
 <div class="topbar">
   <div class="wrap topbar__inner">
     <ul class="topbar__facts">
-      <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Kruidenhof 101, 1112 XX Diemen</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg> Diemerplein 174, 1111 JD Diemen</li>
       <li><a href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg> +31 20 123 4567</a></li>
       <li><a href="mailto:info@101pootjes.nl"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> info@101pootjes.nl</a></li>
     </ul>
@@ -79,9 +81,8 @@
         <button type="button" data-lang="nl" class="is-active">NL</button><button type="button" data-lang="en">EN</button>
       </div>
       <ul class="socials">
-        <li><a href="#" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
-        <li><a href="#" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
-        <li><a href="#" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://wa.me/31201234567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
       </ul>
     </div>
   </div>
@@ -146,7 +147,7 @@
 <!-- ═══ SECTION 3 · Quick info bar ═══════════════════════════════════ -->
 <section class="wrap" aria-label="Winkelinformatie">
   <ul class="quickbar">
-    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3 data-t="qb.store.title">Bezoek Onze Winkel</h3><p>Kruidenhof 101<br>1112 XX Diemen</p></div></li>
+    <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span><div><h3 data-t="qb.store.title">Bezoek Onze Winkel</h3><p>Diemerplein 174<br>1111 JD Diemen</p></div></li>
     <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></span><div><h3 data-t="qb.open.title">Vandaag Open</h3><p>09:00 – 18:00<br><b class="open" data-t="qb.open.status">We zijn open</b></p></div></li>
     <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3 data-t="qb.call.title">Bel Ons</h3><p><a href="tel:+31201234567">+31 20 123 4567</a><br><span data-t="qb.call.text">We helpen je graag</span></p></div></li>
     <li><span class="qi"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></span><div><h3 data-t="qb.park.title">Gratis Parkeren</h3><p data-t="qb.park.text">Volop parkeergelegenheid<br>direct voor de deur</p></div></li>
@@ -246,11 +247,11 @@
 
   <article class="card promo">
     <h2 class="card__eyebrow" data-t="promo.eyebrow">Actie van de Maand</h2>
-    <p class="promo__deal" data-t="promo.deal">20% KORTING</p>
-    <h3 data-t="promo.h3">Beaphar Vlooien- &amp; Tekenbescherming</h3>
-    <p data-t="promo.text">Bescherm je huisdier het hele seizoen.</p>
-    <a class="btn btn--primary" href="#" data-t="promo.cta">Bekijk Actie</a>
-    <img src="assets/img/promo.svg" alt="" width="700" height="520" loading="lazy">
+    <p class="promo__deal" data-t="promo.deal">4 + 1 GRATIS</p>
+    <h3 data-t="promo.h3">Natural Health Steamed</h3>
+    <p data-t="promo.text">Slow-cooked complete kattenvoeding — nu 4+1 gratis.</p>
+    <a class="btn btn--primary" href="#contact" data-t="promo.cta">Kom Langs</a>
+    <img src="assets/img/promo.jpg" alt="Natural Health Steamed kattenvoeding" width="1000" height="708" loading="lazy">
   </article>
 </section>
 
@@ -302,31 +303,67 @@
 
   <article class="card">
     <header class="card__head">
-      <h2><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg> <span data-t="insta.h2">Volg Ons op Instagram</span> <small>@101pootjes</small></h2>
-      <a href="#" data-t="insta.viewall">Bekijk alle foto's →</a>
+      <h2><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg> <span data-t="fb.h2">Volg Ons op Facebook</span> <small>101 Pootjes</small></h2>
+      <a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" data-t="fb.viewall">Bekijk onze pagina →</a>
     </header>
     <ul class="insta">
-      <li><a href="#"><img src="assets/img/insta-1.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-2.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-3.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-4.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="#"><img src="assets/img/insta-5.svg" alt="Instagram-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-1.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-2.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-3.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-4.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-5.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
     </ul>
   </article>
+</section>
+
+<!-- ═══ SECTION 10b · Donation drive (Dierenasiel Oostzaan) ══════════ -->
+<section class="wrap section" id="donate" aria-label="Doneer">
+  <div class="donate">
+    <header class="donate__head">
+      <p class="donate__partner"><svg class="ico" aria-hidden="true"><use href="#i-cat"/></svg> <span data-t="donate.partner">Dierenasiel Oostzaan</span></p>
+      <h2 data-t="donate.h2">Doneer</h2>
+      <p class="donate__sub" data-t="donate.sub">En help de katten van dierenasiel Oostzaan</p>
+    </header>
+
+    <p class="donate__lead" data-t="donate.lead">Ze kunnen deze spullen goed gebruiken:</p>
+
+    <ul class="donate__items">
+      <li>
+        <img src="assets/img/don-snacks.jpg" alt="Churu liquid snacks" width="227" height="306" loading="lazy">
+        <div><h3 data-t="donate.i1.t">Liquid snacks</h3><p data-t="donate.i1.d">Beste snacks om katten te socialiseren</p></div>
+      </li>
+      <li>
+        <img src="assets/img/don-toy.jpg" alt="Kattenhengel speelgoed" width="173" height="367" loading="lazy">
+        <div><h3 data-t="donate.i2.t">Kattenhengel</h3><p data-t="donate.i2.d">Spelen helpt stress te verminderen</p></div>
+      </li>
+      <li>
+        <img src="assets/img/don-food.jpg" alt="Natvoer blikjes" width="302" height="305" loading="lazy">
+        <div><h3 data-t="donate.i3.t">Natvoer</h3><p data-t="donate.i3.d">Alle smaken en merken zijn welkom</p></div>
+      </li>
+      <li>
+        <img src="assets/img/don-litter.jpg" alt="Kattenbakgrit" width="216" height="351" loading="lazy">
+        <div><h3 data-t="donate.i4.t">Kattenbakgrit</h3><p data-t="donate.i4.d">Een zak of een bijdrage kan bij de kassa worden afgerekend</p></div>
+      </li>
+    </ul>
+
+    <p class="donate__note" data-t="donate.note">Andere snacks en speelgoed zijn ook van harte welkom.</p>
+    <p class="donate__discount"><span data-t="donate.discount">Alle donatie-artikelen ontvangen</span> <b data-t="donate.discountb">15% korting</b> <span data-t="donate.discount2">bij de kassa.</span></p>
+  </div>
 </section>
 
 <!-- ═══ SECTION 11 · Visit us ════════════════════════════════════════ -->
 <section class="wrap section visit" id="contact">
   <div class="visit__addr">
     <h2 data-t="visit.store.h2">Bezoek Onze Winkel</h2>
-    <address>Kruidenhof 101<br>1112 XX Diemen<br>Nederland</address>
-    <p class="muted" data-t="visit.park">Gratis parkeren direct voor de winkel.</p>
-    <a class="btn btn--primary" href="https://maps.google.com/?q=Kruidenhof+101+Diemen" target="_blank" rel="noopener" data-t="visit.cta">Routebeschrijving →</a>
+    <address>Diemerplein 174<br>1111 JD Diemen<br>Nederland</address>
+    <p class="muted" data-t="visit.park">In het hart van winkelcentrum Diemerplein.</p>
+    <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Diemerplein+174+1111+JD+Diemen" target="_blank" rel="noopener" data-t="visit.cta">Routebeschrijving →</a>
   </div>
 
   <div class="visit__map">
-    <!-- Vervang door de Elementor Google Maps-widget / een <iframe>-embed -->
-    <img src="assets/img/map.svg" alt="Kaart met 101 Pootjes aan Kruidenhof 101, Diemen" width="1000" height="700" loading="lazy">
+    <!-- Free OpenStreetMap embed — no API key. In WP: Elementor Google Maps widget. -->
+    <iframe title="Kaart — 101 Pootjes, Diemerplein 174, Diemen" loading="lazy"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=4.9556%2C52.3361%2C4.9716%2C52.3431&amp;layer=mapnik&amp;marker=52.3396%2C4.9636"></iframe>
   </div>
 
   <div class="visit__hours">
@@ -347,9 +384,8 @@
     <ul class="contactlist">
       <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+31201234567">+31 20 123 4567</a></li>
       <li><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@101pootjes.nl">info@101pootjes.nl</a></li>
-      <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><a href="https://wa.me/31201234567" data-t="visit.wa">WhatsApp Ons</a></li>
-      <li><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg><a href="#">101 Pootjes</a></li>
-      <li><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg><a href="#">@101pootjes_petshop</a></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><a href="https://wa.me/31201234567" target="_blank" rel="noopener" data-t="visit.wa">WhatsApp Ons</a></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener">101 Pootjes op Facebook</a></li>
     </ul>
   </div>
 </section>
@@ -374,22 +410,40 @@
     <div>
       <h3 data-t="footer.follow">Volg Ons</h3>
       <ul class="socials socials--footer">
-        <li><a href="#" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
-        <li><a href="#" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
-        <li><a href="#" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
+        <li><a href="https://wa.me/31201234567" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a></li>
       </ul>
       <p><a href="tel:+31201234567">+31 20 123 4567</a><br><a href="mailto:info@101pootjes.nl">info@101pootjes.nl</a></p>
     </div>
   </div>
-  <div class="wrap footer__base"><p data-t="footer.copyright">© 2026 101 Pootjes. Alle rechten voorbehouden.</p></div>
+  <div class="wrap footer__base">
+    <p data-t="footer.copyright">© 2026 101 Pootjes. Alle rechten voorbehouden.</p>
+    <ul class="footer__legal">
+      <li><a href="terms.html#voorwaarden" data-t="legal.terms">Algemene Voorwaarden</a></li>
+      <li><a href="terms.html#privacy" data-t="legal.privacy">Privacy &amp; Cookies</a></li>
+      <li><button type="button" class="linklike" id="cookie-settings" data-t="legal.cookiesettings">Cookievoorkeuren</button></li>
+    </ul>
+  </div>
 </footer>
 
 <!-- Sticky mobile action bar -->
 <nav class="mobilebar" aria-label="Snelle acties">
   <a href="tel:+31201234567"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span data-t="mob.call">Bel</span></a>
   <a href="https://wa.me/31201234567"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span data-t="mob.wa">WhatsApp</span></a>
-  <a href="https://maps.google.com/?q=Kruidenhof+101+Diemen"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-t="mob.route">Route</span></a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Diemerplein+174+1111+JD+Diemen"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span data-t="mob.route">Route</span></a>
 </nav>
+
+<!-- Cookie consent -->
+<div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Cookies" hidden>
+  <div class="cookie__inner">
+    <p data-t="cookie.text">We gebruiken cookies om de website te verbeteren en het verkeer te analyseren. Je kunt zelf kiezen.</p>
+    <div class="cookie__actions">
+      <button type="button" class="btn btn--ghost" id="cookie-decline" data-t="cookie.decline">Alleen noodzakelijke</button>
+      <button type="button" class="btn btn--primary" id="cookie-accept" data-t="cookie.accept">Alles accepteren</button>
+    </div>
+    <a class="cookie__more" href="terms.html#privacy" data-t="cookie.more">Meer informatie</a>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
