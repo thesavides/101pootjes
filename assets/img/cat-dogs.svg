@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="480" height="480" role="img" aria-label="dogs">
+  <rect width="480" height="480" fill="#f6e2cb"/>
+  <g fill="#7a4d18" opacity=".55" transform="translate(240 218)">
+    <ellipse cx="-21" cy="-13" rx="8" ry="11"/><ellipse cx="-7" cy="-20" rx="8" ry="11"/>
+    <ellipse cx="8" cy="-20" rx="8" ry="11"/><ellipse cx="22" cy="-13" rx="8" ry="11"/>
+    <path d="M0 -6c13 0 23 9 23 19 0 8-7 12-16 10-5-1-9-1-14 0-9 2-16-2-16-10 0-10 10-19 23-19z"/>
+  </g>
+  <text x="50%" y="274" text-anchor="middle" fill="#7a4d18" opacity=".8"
+    font-family="Poppins,Inter,system-ui,sans-serif" font-size="15" font-weight="600">dogs</text>
+</svg>
