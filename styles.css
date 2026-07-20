@@ -679,3 +679,12 @@ ul { list-style: none; margin: 0; padding: 0; }
   .quickbar li { padding: 14px 18px; }
   .quickbar li + li { border-left: 0; border-top: 1px solid rgba(103,179,46,.22); }
 }
+
+/* ── Comfortable tap targets for secondary text links (mobile) ───── */
+.footer__cols ul li a,
+.footer__cols p a,
+.footer__legal a,
+.footer__legal .linklike,
+.contactlist a,
+.quickbar p a { display: inline-block; padding-block: 7px; }
+.contactlist li { padding: 2px 0; }   /* padding now lives on the link */
