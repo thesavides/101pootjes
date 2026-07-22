@@ -695,6 +695,31 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ── Events + full-width Facebook posts carousel ─────────────────── */
 .events-sec { display: flex; flex-direction: column; gap: var(--gap); }
 .sk-ww-facebook-page-posts { display: block; width: 100%; min-height: 360px; }
+/* SociableKIT renders inline — unlock the fixed-height, inner-scrolling
+   post body so full posts show without a scrollbar inside the card */
+.sk-ww-facebook-page-posts .sk-post-body {
+  height: auto !important; max-height: none !important; overflow: visible !important;
+}
+
+/* ── Permanent donation call-to-action banner ────────────────────── */
+.donatebanner {
+  display: flex; align-items: center; gap: 22px;
+  background: linear-gradient(120deg, #4CAF50, var(--green));
+  color: #fff; border-radius: var(--r-lg); padding: 22px 28px; box-shadow: var(--shadow);
+}
+.donatebanner__icon { display: grid; place-items: center; width: 56px; height: 56px; flex: none;
+  background: rgba(255,255,255,.2); border-radius: 50%; }
+.donatebanner__icon .ico { width: 28px; height: 28px; color: #fff; fill: currentColor; stroke: none; }
+.donatebanner__text { flex: 1; min-width: 0; }
+.donatebanner__text h3 { color: #fff; margin: 0 0 4px; font-size: 1.2rem; }
+.donatebanner__text p { color: rgba(255,255,255,.94); margin: 0; font-size: .9rem; }
+.donatebanner__text b { color: #fff; }
+.donatebanner .btn { flex: none; background: #fff; color: var(--green-dark); border-color: #fff; }
+.donatebanner .btn:hover { background: #f1f5ec; color: var(--green-dark); }
+@media (max-width: 640px) {
+  .donatebanner { flex-direction: column; text-align: center; }
+  .donatebanner .btn { width: 100%; }
+}
 
 /* ── Local pet resources ─────────────────────────────────────────── */
 .resources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
