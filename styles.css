@@ -692,8 +692,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* ── Live weather widget (weatherwidget.io) ──────────────────────── */
 .weather .weatherwidget-io { display: block; margin-top: 10px; min-height: 60px; }
 
-/* ── Facebook posts feed (SociableKIT widget) ────────────────────── */
-.sk-ww-facebook-page-posts { min-height: 420px; }
+/* ── Events + full-width Facebook posts carousel ─────────────────── */
+.events-sec { display: flex; flex-direction: column; gap: var(--gap); }
+.sk-ww-facebook-page-posts { display: block; width: 100%; min-height: 360px; }
 
 /* ── Local pet resources ─────────────────────────────────────────── */
 .resources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
