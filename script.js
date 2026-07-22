@@ -233,4 +233,31 @@
     var reopen = document.getElementById("cookie-settings");
     if (reopen) reopen.addEventListener("click", function () { show(); });
   }
+
+  /* ── Facebook Page feeds — responsive iframe embeds ──────────────
+     The XFBML/SDK widget rendered too narrow and stalled; the direct
+     plugin iframe is reliable. We size it to its container (max 500,
+     Facebook's limit) and re-render on resize. */
+  var FB_HREF = "https://www.facebook.com/profile.php?id=61587038973940";
+  function sizeFbFrames() {
+    document.querySelectorAll(".fbframe").forEach(function (f) {
+      var box = f.closest(".fbfeed") || f.parentElement;
+      var w = Math.max(180, Math.min(500, Math.floor(box.clientWidth)));
+      if (f.getAttribute("data-w") === String(w)) return;   // unchanged
+      var tabs = f.getAttribute("data-tabs") || "timeline";
+      var facepile = f.getAttribute("data-facepile") || "false";
+      f.src = "https://www.facebook.com/plugins/page.php?href=" + encodeURIComponent(FB_HREF) +
+        "&tabs=" + tabs + "&width=" + w + "&height=640&small_header=true" +
+        "&adapt_container_width=true&hide_cover=false&show_facepile=" + facepile;
+      f.width = w; f.height = 640; f.style.width = w + "px";
+      f.setAttribute("data-w", String(w));
+    });
+  }
+  if (document.querySelector(".fbframe")) {
+    sizeFbFrames();
+    var fbTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(fbTimer); fbTimer = setTimeout(sizeFbFrames, 250);
+    });
+  }
 })();
