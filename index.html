@@ -105,6 +105,7 @@
 <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18.5a4 4 0 0 1-.3-8 5.6 5.6 0 0 1 10.7 1.3 3.4 3.4 0 0 1-.7 6.7z"/></symbol>
 <symbol id="i-suncloud" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><path d="M8 2.4v1.6M2.4 8H4M4.2 4.2l1.1 1.1M11.8 4.2l-1.1 1.1"/><path d="M10 19.6a3.6 3.6 0 0 1-.3-7.2 5 5 0 0 1 9.6 1.2 3 3 0 0 1-.6 6z"/></symbol>
 <symbol id="i-chev" viewBox="0 0 24 24"><path d="m8 10 4 4 4-4"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.4 2.3 3.8 5.4 3.8 8.6s-1.4 6.3-3.8 8.6c-2.4-2.3-3.8-5.4-3.8-8.6s1.4-6.3 3.8-8.6z"/></symbol>
 </defs>
 </svg>
 
@@ -194,8 +195,7 @@
       <p data-t="salonbadge.text">Wassen, knippen en verwennen — professionele verzorging voor je beste vriend.</p>
       <p class="announce__disclaimer"><a href="#salon-disclaimer" data-t="salonbadge.disclaimer">Let op: zelfstandige salon — lees meer ↓</a></p>
       <div class="announce__contact">
-        <a class="btn btn--salon btn--sm" href="https://wa.me/31651755091" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> <span data-t="contact.wa">WhatsApp</span></a>
-        <a class="btn btn--ghost btn--sm" href="mailto:manonsvachtatelier@icloud.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> <span data-t="contact.email">E-mail</span></a>
+        <a class="btn btn--salon btn--sm" href="https://manon.ukuva.com" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg> <span data-t="contact.website">Bezoek Website</span></a>
       </div>
     </aside>
 
@@ -327,16 +327,8 @@
 <section class="wrap section duo duo--eq" aria-label="Weer &amp; diertip">
   <article class="card weather">
     <h2 class="card__eyebrow card__eyebrow--fish" data-t="weather.h2">Lokaal Weer</h2>
-    <!-- Live weather — weatherwidget.io, styled to the site palette -->
-    <a class="weatherwidget-io" href="https://forecast7.com/nl/52d344d96/diemen/"
-       data-label_1="DIEMEN" data-label_2="WEER"
-       data-font="Inter" data-icons="Climacons Animated" data-mode="Forecast" data-days="4" data-lang="nl"
-       data-theme="pure" data-basecolor="#ffffff" data-accent="#67B32E"
-       data-textcolor="#333333" data-highcolor="#333333" data-lowcolor="#6b7280"
-       data-suncolor="#F5A623" data-mooncolor="#333333"
-       data-cloudcolor="#9aa8b6" data-cloudfill="#e8eaed"
-       data-raincolor="#2196F3" data-snowcolor="#dfeef7"
-       data-shadow="none">Diemen weer</a>
+    <!-- Live weather — weatherwidget.io, built by script.js so it follows the NL/EN toggle -->
+    <div class="weather__widget" id="weather-widget"></div>
   </article>
 
   <article class="card tip">
@@ -364,10 +356,9 @@
     <div class="salon__body">
       <div class="salon__copy">
         <p data-t="salon.text">Een rustige, zorgvuldige plek voor je huisdier — geleid door mensen die ze bij naam kennen.</p>
-        <p class="salon__contactlead" data-t="salon.contactlead">Reserveren of een vraag? Neem rechtstreeks contact op met de salon:</p>
+        <p class="salon__contactlead" data-t="salon.contactlead">Reserveren en meer informatie vind je op de eigen website van de salon:</p>
         <div class="announce__contact">
-          <a class="btn btn--salon btn--lg" href="https://wa.me/31651755091" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> <span data-t="contact.wa">WhatsApp</span></a>
-          <a class="btn btn--ghost btn--lg" href="mailto:manonsvachtatelier@icloud.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> <span data-t="contact.email">E-mail</span></a>
+          <a class="btn btn--salon btn--lg" href="https://manon.ukuva.com" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg> <span data-t="contact.website">Bezoek Website</span></a>
         </div>
       </div>
       <ul class="ticks salon__ticks">

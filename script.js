@@ -23,7 +23,7 @@
       "salonbadge.title": "Our Grooming Salon opens soon!",
       "salonbadge.text": "Washing, clipping and pampering — professional care for your best friend.",
       "salonbadge.disclaimer": "Please note: independent salon — read more ↓",
-      "contact.wa": "WhatsApp", "contact.email": "Email",
+      "contact.website": "Visit Website",
 
       "promo2.eyebrow": "Our Pick", "promo2.h3": "Thrive Complete",
       "promo2.text": "100% natural cat food", "promo2.cta": "Drop By",
@@ -74,7 +74,7 @@
       "salon.eyebrow": "Coming Soon", "salon.h2": "Professional Grooming Salon",
       "salon.text": "A calm, careful space for your pet — run by people who know them by name.",
       "salon.t1": "Bathing", "salon.t2": "Nail Clipping", "salon.t3": "Breed Styling", "salon.t4": "Puppy Grooming",
-      "salon.contactlead": "To book or ask a question, contact the salon directly:",
+      "salon.contactlead": "Book and find more information on the salon's own website:",
       "salon.note": "Please note: the grooming salon <b>Manon's Vachtatelier</b> is an independent business and is separate from 101 Pootjes. All reservations, appointments and payments are handled directly with the salon. 101 Pootjes is not involved in the salon's services and accepts no responsibility or liability for them.",
 
       "events.h2": "Upcoming Events", "events.viewall": "See on Facebook →",
@@ -133,6 +133,35 @@
       b.classList.toggle("is-active", b.getAttribute("data-lang") === lang);
     });
     try { localStorage.setItem("pootjes-lang", lang); } catch (e) {}
+    setWeatherLang(lang);
+  }
+
+  /* ── Weather widget: (re)build it in the active language ──────────── */
+  var WEATHER_ATTRS = {
+    "href": "https://forecast7.com/nl/52d344d96/diemen/",
+    "data-font": "Inter", "data-icons": "Climacons Animated", "data-mode": "Forecast", "data-days": "4",
+    "data-theme": "pure", "data-basecolor": "#ffffff", "data-accent": "#67B32E",
+    "data-textcolor": "#333333", "data-highcolor": "#333333", "data-lowcolor": "#6b7280",
+    "data-suncolor": "#F5A623", "data-mooncolor": "#333333", "data-cloudcolor": "#9aa8b6",
+    "data-cloudfill": "#e8eaed", "data-raincolor": "#2196F3", "data-snowcolor": "#dfeef7", "data-shadow": "none"
+  };
+  function setWeatherLang(lang) {
+    var host = document.getElementById("weather-widget");
+    if (!host) return;
+    var wl = lang === "en" ? "en" : "nl";
+    if (host.getAttribute("data-lang") === wl) return;   // already in this language
+    host.setAttribute("data-lang", wl);
+    var a = document.createElement("a");
+    a.className = "weatherwidget-io";
+    Object.keys(WEATHER_ATTRS).forEach(function (k) { a.setAttribute(k, WEATHER_ATTRS[k]); });
+    a.setAttribute("data-label_1", "DIEMEN");
+    a.setAttribute("data-label_2", wl === "en" ? "WEATHER" : "WEER");
+    a.setAttribute("data-lang", wl);
+    a.textContent = wl === "en" ? "Diemen weather" : "Diemen weer";
+    host.innerHTML = "";
+    host.appendChild(a);
+    // If the widget script has already loaded, re-render; otherwise it will pick this up on load.
+    if (typeof window.__weatherwidget_init === "function") window.__weatherwidget_init();
   }
 
   document.querySelectorAll(".langswitch").forEach(function (sw) {
@@ -144,7 +173,8 @@
 
   var saved = "nl";
   try { saved = localStorage.getItem("pootjes-lang") || "nl"; } catch (e) {}
-  if (saved !== "nl") applyLang(saved);   // NL is already in the DOM
+  if (saved !== "nl") applyLang(saved);   // NL text is already in the DOM
+  setWeatherLang(saved);                  // build the weather widget in the saved language
 
   /* ── Sticky header shadow ──────────────────────────────────────── */
   var header = document.getElementById("header");
