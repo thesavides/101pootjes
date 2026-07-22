@@ -326,17 +326,16 @@
 <section class="wrap section duo duo--eq" aria-label="Weer &amp; diertip">
   <article class="card weather">
     <h2 class="card__eyebrow card__eyebrow--fish" data-t="weather.h2">Lokaal Weer</h2>
-    <p class="weather__loc">Diemen, NL</p>
-    <div class="weather__now">
-      <span class="weather__ico" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-suncloud"/></svg></span>
-      <div><b>22°C</b><small data-t="weather.cond">Half bewolkt</small></div>
-    </div>
-    <ul class="weather__days">
-      <li><span data-t="weather.d1">Vandaag</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></span><b>22°</b></li>
-      <li><span data-t="weather.d2">Woe</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></span><b>24°</b></li>
-      <li><span data-t="weather.d3">Don</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><b>21°</b></li>
-      <li><span data-t="weather.d4">Vrij</span><span aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-cloud"/></svg></span><b>20°</b></li>
-    </ul>
+    <!-- Live weather — weatherwidget.io, styled to the site palette -->
+    <a class="weatherwidget-io" href="https://forecast7.com/nl/52d344d96/diemen/"
+       data-label_1="DIEMEN" data-label_2="WEER"
+       data-font="Inter" data-icons="Climacons Animated" data-mode="Forecast" data-days="4" data-lang="nl"
+       data-theme="pure" data-basecolor="#ffffff" data-accent="#67B32E"
+       data-textcolor="#333333" data-highcolor="#333333" data-lowcolor="#6b7280"
+       data-suncolor="#F5A623" data-mooncolor="#333333"
+       data-cloudcolor="#9aa8b6" data-cloudfill="#e8eaed"
+       data-raincolor="#2196F3" data-snowcolor="#dfeef7"
+       data-shadow="none">Diemen weer</a>
   </article>
 
   <article class="card tip">
@@ -571,5 +570,9 @@
 </div>
 
 <script src="script.js"></script>
+<!-- weatherwidget.io loader -->
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 </body>
 </html>

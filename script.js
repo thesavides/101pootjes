@@ -61,8 +61,7 @@
       "brands.h2": "Brands We Stock",
       "brands.sub": "Trusted names we've chosen ourselves — and can advise you on.",
 
-      "weather.h2": "Local Weather", "weather.cond": "Partly Cloudy",
-      "weather.d1": "Today", "weather.d2": "Wed", "weather.d3": "Thu", "weather.d4": "Fri",
+      "weather.h2": "Local Weather",
 
       "tip.h2": "Pet Tip of the Day",
       "tip.text": "Hot days can be tough on pets. Make sure they always have fresh water and shade.",
