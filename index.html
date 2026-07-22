@@ -370,17 +370,30 @@
 
 <div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
-<!-- ═══ SECTION 9 · Events (Facebook events) + Facebook feed ════════ -->
+<!-- ═══ SECTION 9 · Events (calendar) + Facebook feed ══════════════ -->
 <section class="wrap section duo" id="events">
   <article class="card">
     <header class="card__head">
       <h2><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="events.h2">Aankomende Evenementen</span></h2>
       <a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" data-t="events.viewall">Bekijk op Facebook →</a>
     </header>
-    <!-- Facebook Page plugin — Events tab drives the calendar -->
-    <div class="fbfeed">
-      <iframe class="fbframe" title="Facebook-evenementen van 101 Pootjes" data-tabs="events" data-facepile="false" scrolling="no" frameborder="0" allowfullscreen="true" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-    </div>
+    <ul class="events">
+      <li>
+        <time datetime="2026-06-01"><span>JUN</span><b>01</b></time>
+        <div><h3 data-t="ev1.title">Puppy Speelochtend</h3><p class="meta" data-t="ev1.time">Zondag 1 juni • 10:00</p><p data-t="ev1.text">Een gezellige ochtend voor pups en hun baasjes.</p></div>
+        <img src="assets/img/event-1.jpg" alt="Puppytraining" width="200" height="200" loading="lazy">
+      </li>
+      <li>
+        <time datetime="2026-06-15"><span>JUN</span><b>15</b></time>
+        <div><h3 data-t="ev2.title">Gratis Nagelknipdag</h3><p class="meta" data-t="ev2.time">Zondag 15 juni • 10:00</p><p data-t="ev2.text">Gratis nagels knippen voor honden. Geen afspraak nodig.</p></div>
+        <img src="assets/img/event-2.jpg" alt="Nagels knippen" width="200" height="200" loading="lazy">
+      </li>
+      <li>
+        <time datetime="2026-06-28"><span>JUN</span><b>28</b></time>
+        <div><h3 data-t="ev3.title">Workshop Eerste Hulp bij Honden</h3><p class="meta" data-t="ev3.time">Zaterdag 28 juni • 11:00</p><p data-t="ev3.text">Leer essentiële eerste hulp voor je hond.</p></div>
+        <img src="assets/img/event-3.jpg" alt="Eerste hulp bij honden" width="200" height="200" loading="lazy">
+      </li>
+    </ul>
   </article>
 
   <article class="card">
@@ -388,48 +401,71 @@
       <h2><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg> <span data-t="fb.h2">Volg Ons op Facebook</span> <small>101 Pootjes</small></h2>
       <a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" data-t="fb.viewall">Bekijk onze pagina →</a>
     </header>
-    <!-- Facebook Page plugin — Timeline feed -->
-    <div class="fbfeed">
-      <iframe class="fbframe" title="Facebook-tijdlijn van 101 Pootjes" data-tabs="timeline" data-facepile="true" scrolling="no" frameborder="0" allowfullscreen="true" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-    </div>
+    <!-- SociableKIT — Facebook page posts (server-side, no third-party-cookie spinner) -->
+    <div class="sk-ww-facebook-page-posts" data-embed-id="25699280"></div>
   </article>
 </section>
 
 <div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
-<!-- ═══ SECTION 10 · Donation drive (Dierenasiel Oostzaan) ══════════ -->
-<section class="wrap section" id="donate" aria-label="Doneer">
-  <div class="donate">
-    <header class="donate__head">
-      <p class="donate__partner"><svg class="ico" aria-hidden="true"><use href="#i-cat"/></svg> <span data-t="donate.partner">Dierenasiel Oostzaan</span></p>
-      <h2 data-t="donate.h2">Doneer</h2>
-      <p class="donate__sub" data-t="donate.sub">En help de katten van dierenasiel Oostzaan</p>
-    </header>
+<!-- ═══ SECTION 10 · Local pet resources ════════════════════════════ -->
+<section class="wrap section" id="resources" aria-label="Lokale diervoorzieningen">
+  <header class="sechead">
+    <h2 data-t="res.h2">Lokale Diervoorzieningen</h2>
+    <p data-t="res.sub">Handige adressen en diensten voor jou en je huisdier in de buurt.</p>
+  </header>
 
-    <p class="donate__lead" data-t="donate.lead">Ze kunnen deze spullen goed gebruiken:</p>
+  <ul class="resources">
+    <!-- ▸ Dierenasiel Oostzaan — cat shelter + donation drive -->
+    <li class="resource">
+      <div class="resource__media resource__media--logo">
+        <img src="assets/img/res-asiel-logo.png" alt="Dierenasiel Oostzaan" width="922" height="182" loading="lazy">
+      </div>
+      <div class="resource__body">
+        <span class="resource__tag" style="--accent:var(--c-cat)" data-t="res.shelter.tag">Kattenasiel · Steun &amp; doneer</span>
+        <h3>Dierenasiel Oostzaan</h3>
+        <p data-t="res.shelter.desc">Hét kattenasiel van regio Amsterdam. Steun het asiel met een donatie — doneer snacks, speelgoed, natvoer of kattenbakgrit.</p>
+        <p class="resource__highlight" data-t="res.shelter.donate">Donatie-artikelen krijgen <b>15% korting</b> bij ons aan de kassa.</p>
+        <ul class="resource__details">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span><a href="tel:+31206335400">020-6335400</a> <span data-t="res.shelter.tel">— ma t/m za, 10:00–15:00</span></span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg><span data-t="res.shelter.visit">Bezoek op afspraak: 13:00–15:30</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg><span data-t="res.shelter.don">Doneren kan altijd: 9:30–16:30</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Zuideinde 220, 1511 GM Oostzaan</span></li>
+        </ul>
+        <a class="btn btn--ghost btn--sm" href="https://dierenasieloostzaan.nl/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg> <span data-t="res.website">Bezoek website</span></a>
+      </div>
+    </li>
 
-    <ul class="donate__items">
-      <li>
-        <img src="assets/img/don-snacks.jpg" alt="Churu liquid snacks" width="227" height="306" loading="lazy">
-        <div><h3 data-t="donate.i1.t">Liquid snacks</h3><p data-t="donate.i1.d">Beste snacks om katten te socialiseren</p></div>
-      </li>
-      <li>
-        <img src="assets/img/don-toy.jpg" alt="Kattenhengel speelgoed" width="173" height="367" loading="lazy">
-        <div><h3 data-t="donate.i2.t">Kattenhengel</h3><p data-t="donate.i2.d">Spelen helpt stress te verminderen</p></div>
-      </li>
-      <li>
-        <img src="assets/img/don-food.jpg" alt="Natvoer blikjes" width="302" height="305" loading="lazy">
-        <div><h3 data-t="donate.i3.t">Natvoer</h3><p data-t="donate.i3.d">Alle smaken en merken zijn welkom</p></div>
-      </li>
-      <li>
-        <img src="assets/img/don-litter.jpg" alt="Kattenbakgrit" width="216" height="351" loading="lazy">
-        <div><h3 data-t="donate.i4.t">Kattenbakgrit</h3><p data-t="donate.i4.d">Een zak of een bijdrage kan bij de kassa worden afgerekend</p></div>
-      </li>
-    </ul>
+    <!-- ▸ Siya & Me — dog walking & daycare -->
+    <li class="resource">
+      <div class="resource__media">
+        <img src="assets/img/res-siya.jpg" alt="Siya, een zwarte cockerspaniël in het park" width="900" height="600" loading="lazy">
+      </div>
+      <div class="resource__body">
+        <span class="resource__tag" style="--accent:var(--c-dog)" data-t="res.siya.tag">Hondenuitlaat &amp; dagopvang</span>
+        <h3>Siya &amp; Me</h3>
+        <p data-t="res.siya.desc">Kleinschalige, persoonlijke hondenuitlaat, dagopvang en logeeropvang in Diemen. Maximaal drie honden — altijd thuis, altijd Siya.</p>
+        <ul class="resource__details">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span><a href="https://wa.me/31646622586" target="_blank" rel="noopener">WhatsApp 06 46 62 25 86</a></span></li>
+        </ul>
+        <a class="btn btn--ghost btn--sm" href="https://siya.ukuva.com" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg> <span data-t="res.website">Bezoek website</span></a>
+      </div>
+    </li>
 
-    <p class="donate__note" data-t="donate.note">Andere snacks en speelgoed zijn ook van harte welkom.</p>
-    <p class="donate__discount"><span data-t="donate.discount">Alle donatie-artikelen ontvangen</span> <b data-t="donate.discountb">15% korting</b> <span data-t="donate.discount2">bij de kassa.</span></p>
-  </div>
+    <!-- ▸ Gemeente Diemen — where to walk your dog -->
+    <li class="resource">
+      <div class="resource__media resource__media--icon" style="--accent:var(--c-fish)">
+        <svg class="resource__bigicon" aria-hidden="true"><use href="#i-paw"/></svg>
+      </div>
+      <div class="resource__body">
+        <span class="resource__tag" style="--accent:var(--c-fish)" data-t="res.council.tag">Gemeente Diemen</span>
+        <h3 data-t="res.council.name">Eropuit met je hond</h3>
+        <p data-t="res.council.desc">Waar mag je hond loslopen of uitgelaten worden in Diemen? Bekijk de losloopgebieden en de regels van de gemeente.</p>
+        <p class="resource__note" data-t="res.council.dutchonly">Deze pagina is alleen in het Nederlands beschikbaar.</p>
+        <a class="btn btn--ghost btn--sm" href="https://www.diemen.nl/Onderwerpen/Sport_cultuur_en_vrije_tijd/Vrije_tijd/Eropuit_met_je_hond" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg> <span data-t="res.council.cta">Meer info</span></a>
+      </div>
+    </li>
+  </ul>
 </section>
 
 <div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
@@ -549,5 +585,7 @@
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
+<!-- SociableKIT — Facebook page posts feed -->
+<script src="https://widgets.sociablekit.com/facebook-page-posts/widget.js" defer></script>
 </body>
 </html>

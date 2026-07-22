@@ -78,19 +78,28 @@
       "salon.note": "Please note: the grooming salon <b>Manon's Vachtatelier</b> is an independent business and is separate from 101 Pootjes. All reservations, appointments and payments are handled directly with the salon. 101 Pootjes is not involved in the salon's services and accepts no responsibility or liability for them.",
 
       "events.h2": "Upcoming Events", "events.viewall": "See on Facebook →",
+      "ev1.title": "Puppy Social Morning", "ev1.time": "Sunday, 1 June • 10:00", "ev1.text": "A fun morning for pups and their people.",
+      "ev2.title": "Free Nail Trim Day", "ev2.time": "Sunday, 15 June • 10:00", "ev2.text": "Free nail trims for dogs. No appointment needed.",
+      "ev3.title": "Dog First Aid Workshop", "ev3.time": "Saturday, 28 June • 11:00", "ev3.text": "Learn essential first aid skills for your dog.",
 
       "fb.h2": "Follow Us on Facebook", "fb.viewall": "Visit our page →",
 
-      "donate.partner": "Dierenasiel Oostzaan (cat shelter)",
-      "donate.h2": "Donate",
-      "donate.sub": "And help the cats of Dierenasiel Oostzaan",
-      "donate.lead": "They can really use these items:",
-      "donate.i1.t": "Liquid snacks", "donate.i1.d": "The best snacks for socialising cats",
-      "donate.i2.t": "Cat wand toy", "donate.i2.d": "Play helps reduce stress",
-      "donate.i3.t": "Wet food", "donate.i3.d": "All flavours and brands are welcome",
-      "donate.i4.t": "Cat litter", "donate.i4.d": "A bag or a contribution can be paid at the till",
-      "donate.note": "Other snacks and toys are very welcome too.",
-      "donate.discount": "All donated items receive", "donate.discountb": "15% off", "donate.discount2": "at the till.",
+      "res.h2": "Local Pet Resources",
+      "res.sub": "Handy local addresses and services for you and your pet.",
+      "res.website": "Visit website",
+      "res.shelter.tag": "Cat shelter · Support &amp; donate",
+      "res.shelter.desc": "The cat shelter for the Amsterdam region. Support them with a donation — snacks, toys, wet food or cat litter.",
+      "res.shelter.donate": "Donated items get <b>15% off</b> at our till.",
+      "res.shelter.tel": "— Mon–Sat, 10:00–15:00",
+      "res.shelter.visit": "Visits by appointment: 13:00–15:30",
+      "res.shelter.don": "Donations always welcome: 9:30–16:30",
+      "res.siya.tag": "Dog walking &amp; daycare",
+      "res.siya.desc": "A small, personal dog walking, daycare and overnight service in Diemen. Maximum three dogs — always home-based, always Siya.",
+      "res.council.tag": "Diemen Council",
+      "res.council.name": "Out &amp; about with your dog",
+      "res.council.desc": "Where can your dog roam free or be walked in Diemen? See the off-leash areas and the council's rules.",
+      "res.council.dutchonly": "This council page is only available in Dutch.",
+      "res.council.cta": "More info",
 
       "visit.store.h2": "Visit Our Store",
       "visit.park": "Our shop and parking are located inside the Diemerplein shopping centre.",
@@ -234,30 +243,4 @@
     if (reopen) reopen.addEventListener("click", function () { show(); });
   }
 
-  /* ── Facebook Page feeds — responsive iframe embeds ──────────────
-     The XFBML/SDK widget rendered too narrow and stalled; the direct
-     plugin iframe is reliable. We size it to its container (max 500,
-     Facebook's limit) and re-render on resize. */
-  var FB_HREF = "https://www.facebook.com/profile.php?id=61587038973940";
-  function sizeFbFrames() {
-    document.querySelectorAll(".fbframe").forEach(function (f) {
-      var box = f.closest(".fbfeed") || f.parentElement;
-      var w = Math.max(180, Math.min(500, Math.floor(box.clientWidth)));
-      if (f.getAttribute("data-w") === String(w)) return;   // unchanged
-      var tabs = f.getAttribute("data-tabs") || "timeline";
-      var facepile = f.getAttribute("data-facepile") || "false";
-      f.src = "https://www.facebook.com/plugins/page.php?href=" + encodeURIComponent(FB_HREF) +
-        "&tabs=" + tabs + "&width=" + w + "&height=640&small_header=true" +
-        "&adapt_container_width=true&hide_cover=false&show_facepile=" + facepile;
-      f.width = w; f.height = 640; f.style.width = w + "px";
-      f.setAttribute("data-w", String(w));
-    });
-  }
-  if (document.querySelector(".fbframe")) {
-    sizeFbFrames();
-    var fbTimer;
-    window.addEventListener("resize", function () {
-      clearTimeout(fbTimer); fbTimer = setTimeout(sizeFbFrames, 250);
-    });
-  }
 })();
