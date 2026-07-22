@@ -697,12 +697,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 .sk-ww-facebook-page-posts { display: block; width: 100%; min-height: 360px; }
 /* SociableKIT renders inline — unlock the fixed-height, inner-scrolling
    post body so full posts show without a scrollbar inside the card */
+/* Kill the inner scrollbar SociableKIT puts on each post body; the carousel
+   slide height itself comes from the SK dashboard "Post height" (450px) so
+   all slides stay even. */
 .sk-ww-facebook-page-posts .sk-post-body {
   height: auto !important; max-height: none !important; overflow: visible !important;
 }
-/* Carousel viewport is locked to the "Post height" value (300px) and clips
-   posts — let it grow so full posts show */
-.sk-ww-facebook-page-posts .sk-carousel-slider { height: auto !important; min-height: 320px; }
 
 /* ── Permanent donation call-to-action banner ────────────────────── */
 .donatebanner {
