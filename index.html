@@ -80,6 +80,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 </head>
 <body>
+<div id="fb-root"></div>
 
 <svg class="spritesheet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
 <defs>
@@ -379,30 +380,19 @@
 
 <div class="coldiv" aria-hidden="true"><span class="colourbar"></span></div>
 
-<!-- ═══ SECTION 9 · Events + Facebook ════════════════════════════════ -->
+<!-- ═══ SECTION 9 · Events (Facebook events) + Facebook feed ════════ -->
 <section class="wrap section duo" id="events">
   <article class="card">
     <header class="card__head">
       <h2><svg class="ico" aria-hidden="true"><use href="#i-paw"/></svg> <span data-t="events.h2">Aankomende Evenementen</span></h2>
-      <a href="#" data-t="events.viewall">Bekijk alle evenementen →</a>
+      <a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" data-t="events.viewall">Bekijk op Facebook →</a>
     </header>
-    <ul class="events">
-      <li>
-        <time datetime="2026-06-01"><span>JUN</span><b>01</b></time>
-        <div><h3 data-t="ev1.title">Puppy Speelochtend</h3><p class="meta" data-t="ev1.time">Zondag 1 juni • 10:00</p><p data-t="ev1.text">Een gezellige ochtend voor pups en hun baasjes.</p></div>
-        <img src="assets/img/event-1.jpg" alt="Puppytraining" width="200" height="200" loading="lazy">
-      </li>
-      <li>
-        <time datetime="2026-06-15"><span>JUN</span><b>15</b></time>
-        <div><h3 data-t="ev2.title">Gratis Nagelknipdag</h3><p class="meta" data-t="ev2.time">Zondag 15 juni • 10:00</p><p data-t="ev2.text">Gratis nagels knippen voor honden. Geen afspraak nodig.</p></div>
-        <img src="assets/img/event-2.jpg" alt="Nagels knippen" width="200" height="200" loading="lazy">
-      </li>
-      <li>
-        <time datetime="2026-06-28"><span>JUN</span><b>28</b></time>
-        <div><h3 data-t="ev3.title">Workshop Eerste Hulp bij Honden</h3><p class="meta" data-t="ev3.time">Zaterdag 28 juni • 11:00</p><p data-t="ev3.text">Leer essentiële eerste hulp voor je hond.</p></div>
-        <img src="assets/img/event-3.jpg" alt="Eerste hulp bij honden" width="200" height="200" loading="lazy">
-      </li>
-    </ul>
+    <!-- Facebook Page plugin — Events tab drives the calendar -->
+    <div class="fbfeed">
+      <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61587038973940" data-tabs="events" data-width="500" data-height="640" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+        <blockquote cite="https://www.facebook.com/profile.php?id=61587038973940" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61587038973940">101 Pootjes</a></blockquote>
+      </div>
+    </div>
   </article>
 
   <article class="card">
@@ -410,13 +400,12 @@
       <h2><svg class="ico" aria-hidden="true"><use href="#i-fb"/></svg> <span data-t="fb.h2">Volg Ons op Facebook</span> <small>101 Pootjes</small></h2>
       <a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener" data-t="fb.viewall">Bekijk onze pagina →</a>
     </header>
-    <ul class="insta">
-      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-1.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-2.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-3.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-4.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61587038973940" target="_blank" rel="noopener"><img src="assets/img/insta-5.svg" alt="Facebook-bericht" width="400" height="400" loading="lazy"></a></li>
-    </ul>
+    <!-- Facebook Page plugin — Timeline feed -->
+    <div class="fbfeed">
+      <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61587038973940" data-tabs="timeline" data-width="500" data-height="640" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/profile.php?id=61587038973940" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=61587038973940">101 Pootjes</a></blockquote>
+      </div>
+    </div>
   </article>
 </section>
 
@@ -574,5 +563,7 @@
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
+<!-- Facebook SDK (Page plugin — events feed + timeline) -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v21.0"></script>
 </body>
 </html>

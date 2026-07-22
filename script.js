@@ -77,10 +77,7 @@
       "salon.contactlead": "To book or ask a question, contact the salon directly:",
       "salon.note": "Please note: the grooming salon <b>Manon's Vachtatelier</b> is an independent business and is separate from 101 Pootjes. All reservations, appointments and payments are handled directly with the salon. 101 Pootjes is not involved in the salon's services and accepts no responsibility or liability for them.",
 
-      "events.h2": "Upcoming Events", "events.viewall": "View all events →",
-      "ev1.title": "Puppy Social Morning", "ev1.time": "Sunday, 1 June • 10:00", "ev1.text": "A fun morning for pups and their people.",
-      "ev2.title": "Free Nail Trim Day", "ev2.time": "Sunday, 15 June • 10:00", "ev2.text": "Free nail trims for dogs. No appointment needed.",
-      "ev3.title": "Dog First Aid Workshop", "ev3.time": "Saturday, 28 June • 11:00", "ev3.text": "Learn essential first aid skills for your dog.",
+      "events.h2": "Upcoming Events", "events.viewall": "See on Facebook →",
 
       "fb.h2": "Follow Us on Facebook", "fb.viewall": "Visit our page →",
 
