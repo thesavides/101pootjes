@@ -84,8 +84,9 @@
 
       "fb.h2": "Follow Us on Facebook", "fb.viewall": "Visit our page →",
 
-      "donateb.title": "Donate &amp; get 15% off",
-      "donateb.text": "Support Dierenasiel Oostzaan with snacks, toys, wet food or cat litter — and get <b>15% off</b> donated items at our till.",
+      "donateb.title": "Donate to the cat shelter &amp; get 15% off",
+      "donateb.text": "Support <b>Dierenasiel Oostzaan</b> (cat shelter). Donate one of these items with us and get <b>15% off</b>:",
+      "donateb.i1": "Liquid snacks", "donateb.i2": "Cat wand toy", "donateb.i3": "Wet food", "donateb.i4": "Cat litter",
       "donateb.cta": "About donating",
 
       "res.h2": "Local Pet Resources",

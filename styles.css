@@ -700,6 +700,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .sk-ww-facebook-page-posts .sk-post-body {
   height: auto !important; max-height: none !important; overflow: visible !important;
 }
+/* Carousel viewport is locked to the "Post height" value (300px) and clips
+   posts — let it grow so full posts show */
+.sk-ww-facebook-page-posts .sk-carousel-slider { height: auto !important; min-height: 320px; }
 
 /* ── Permanent donation call-to-action banner ────────────────────── */
 .donatebanner {
@@ -714,6 +717,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .donatebanner__text h3 { color: #fff; margin: 0 0 4px; font-size: 1.2rem; }
 .donatebanner__text p { color: rgba(255,255,255,.94); margin: 0; font-size: .9rem; }
 .donatebanner__text b { color: #fff; }
+.donatebanner__items { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; }
+.donatebanner__items li { background: rgba(255,255,255,.22); border-radius: 999px; padding: 5px 13px; font-size: .8rem; font-weight: 600; }
 .donatebanner .btn { flex: none; background: #fff; color: var(--green-dark); border-color: #fff; }
 .donatebanner .btn:hover { background: #f1f5ec; color: var(--green-dark); }
 @media (max-width: 640px) {
@@ -728,7 +733,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .resource__media { height: 190px; }
 .resource__media img { width: 100%; height: 100%; object-fit: cover; }
 .resource__media--logo { display: grid; place-items: center; background: var(--green-soft); padding: 24px; }
-.resource__media--logo img { object-fit: contain; width: auto; max-width: 100%; height: auto; max-height: 64px; }
+.resource__media--logo img { object-fit: contain; width: auto; max-width: 100%; height: auto; max-height: 88px; }
 .resource__media--icon { display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 12%, #fff); }
 .resource__bigicon { width: 66px; height: 66px; color: var(--accent); fill: currentColor; stroke: none; }
 .resource__body { display: flex; flex-direction: column; flex: 1; padding: 22px; }
